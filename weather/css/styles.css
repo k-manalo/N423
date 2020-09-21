@@ -1,0 +1,545 @@
+html {
+  padding: 0;
+  margin: 0; }
+
+body {
+  padding: 0;
+  margin: 0; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  body p {
+    font-family: 'Khand', sans-serif; }
+  body .container {
+    /*
+        background-image: linear-gradient( rgba(16, 17, 40,.985),rgba(16, 17, 40,.98)),url(../images/background.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        */
+    background-color: #101128;
+    width: 100%; }
+    body .container nav {
+      font-family: 'Khand', sans-serif;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 50px; }
+      body .container nav .nav-container {
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        justify-content: space-between; }
+        body .container nav .nav-container .navlinks {
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
+          text-align: center;
+          justify-content: center; }
+          body .container nav .nav-container .navlinks a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            margin-top: 10px; }
+          body .container nav .nav-container .navlinks .nav-divider {
+            margin-left: 20px;
+            margin-top: 13px;
+            height: 50px;
+            width: 2px;
+            background-color: grey; }
+          body .container nav .nav-container .navlinks .login-container {
+            padding-left: 50px;
+            float: right;
+            height: 100px;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px; }
+            body .container nav .nav-container .navlinks .login-container .login {
+              padding-bottom: 10px;
+              background-color: #4f7aff;
+              height: 40px;
+              width: 100px;
+              border-radius: 20px;
+              text-align: center;
+              margin-right: 20px;
+              cursor: pointer; }
+            body .container nav .nav-container .navlinks .login-container .signup {
+              padding-bottom: 10px;
+              background-color: #4f7aff;
+              height: 40px;
+              width: 100px;
+              border-radius: 20px;
+              text-align: center;
+              cursor: pointer; }
+    body .container .loginmenu {
+      height: 150px;
+      width: 100%;
+      background-color: #101128;
+      display: none; }
+      body .container .loginmenu .logintwo {
+        display: none; }
+      body .container .loginmenu .signuptwo {
+        display: none; }
+    body .container .title {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sky.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px;
+      color: white;
+      text-shadow: 2px 2px black; }
+      body .container .title h1 {
+        padding-top: 25px;
+        margin-left: 85px;
+        font-size: 30px; }
+    body .container .inputBox {
+      height: 1000px;
+      margin-top: 50px;
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      color: white; }
+      body .container .inputBox p {
+        margin-left: 85px; }
+      body .container .inputBox #zipcode {
+        margin-left: 85px;
+        border-radius: 20px;
+        border: .25px solid; }
+      body .container .inputBox #days {
+        margin-left: 85px;
+        border-radius: 20px;
+        border: .25px solid; }
+      body .container .inputBox #getWeather {
+        margin-left: 85px;
+        outline-style: none;
+        cursor: pointer;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        background-color: #4f7aff;
+        border: none; }
+    body .container .location-content {
+      color: white;
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url(../images/country.jpg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+      background-color: #101128;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      text-align: center; }
+      body .container .location-content .city {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        height: 75px;
+        background-color: rgba(16, 17, 40, 0.5);
+        font-size: 60px; }
+    body .container .current-content {
+      margin-top: 50px;
+      color: white;
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      padding-top: 5px;
+      padding-bottom: 50px;
+      padding-left: 5px; }
+      body .container .current-content .currentTitle {
+        margin-top: 50px;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url(../images/current.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover; }
+        body .container .current-content .currentTitle h2 {
+          padding-top: 35px;
+          font-size: 30px;
+          margin-left: 85px; }
+      body .container .current-content h3 {
+        margin-left: 85px; }
+      body .container .current-content p {
+        margin-left: 85px; }
+      body .container .current-content .condition {
+        color: white;
+        height: 50px;
+        width: 100%;
+        font-size: 30px; }
+    body .container .forecastTitle {
+      margin-top: 50px;
+      color: white;
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url(../images/sunset.jpg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover; }
+      body .container .forecastTitle h1 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 25px; }
+    body .container .forecast-content {
+      color: white;
+      display: flex;
+      margin: auto;
+      display: flex;
+      text-align: center; }
+
+@media (max-width: 690px) {
+  body .container nav .nav-container .navlinks .nav-divider {
+    display: none; }
+  body .container nav .nav-container .navlinks .login-container {
+    display: none; }
+  body .container .loginmenu {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(16, 17, 40, 0.98);
+    display: flex;
+    padding: 20px;
+    justify-content: center; }
+    body .container .loginmenu .logintwo {
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      body .container .loginmenu .logintwo p {
+        padding-left: 35px; }
+    body .container .loginmenu .signuptwo {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      body .container .loginmenu .signuptwo p {
+        padding-left: 35px; } }
+
+.about-container {
+  background-color: #101128;
+  width: 100%; }
+  .about-container nav {
+    font-family: 'Khand', sans-serif;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px; }
+    .about-container nav .nav-container {
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      justify-content: space-between; }
+      .about-container nav .nav-container .navlinks {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        justify-content: center; }
+        .about-container nav .nav-container .navlinks a {
+          text-decoration: none;
+          color: white;
+          padding: 20px;
+          margin-top: 10px; }
+        .about-container nav .nav-container .navlinks .nav-divider {
+          margin-left: 20px;
+          margin-top: 13px;
+          height: 50px;
+          width: 2px;
+          background-color: grey; }
+        .about-container nav .nav-container .navlinks .login-container {
+          padding-left: 50px;
+          float: right;
+          height: 100px;
+          width: 300px;
+          display: flex;
+          flex-direction: row;
+          margin-top: 15px; }
+          .about-container nav .nav-container .navlinks .login-container .login {
+            padding-bottom: 10px;
+            background-color: #4f7aff;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            text-align: center;
+            margin-right: 20px;
+            cursor: pointer; }
+          .about-container nav .nav-container .navlinks .login-container .signup {
+            padding-bottom: 10px;
+            background-color: #4f7aff;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer; }
+  .about-container .loginmenu {
+    height: 150px;
+    width: 100%;
+    background-color: #101128;
+    display: none; }
+    .about-container .loginmenu .logintwo {
+      display: none; }
+    .about-container .loginmenu .signuptwo {
+      display: none; }
+  .about-container .title {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    color: white;
+    text-shadow: 2px 2px black; }
+    .about-container .title h1 {
+      padding-top: 25px;
+      margin-left: 85px;
+      font-size: 30px; }
+  .about-container .about {
+    height: 1000px;
+    margin-top: 50px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey; }
+    .about-container .about .about-title {
+      width: 70%;
+      margin: 0 auto; }
+      .about-container .about .about-title h3 {
+        color: white;
+        font-size: 30px; }
+    .about-container .about .about-info {
+      width: 70%;
+      height: 200px;
+      background: white;
+      opacity: .5;
+      margin: 0 auto; }
+      .about-container .about .about-info p {
+        font-size: 20px;
+        padding: 10px; }
+    .about-container .about .help-info {
+      width: 70%;
+      height: 400px;
+      background: white;
+      opacity: .5;
+      margin: 0 auto; }
+      .about-container .about .help-info p {
+        font-size: 20px;
+        padding: 10px; }
+
+@media (max-width: 930px) {
+  .about-container .about .about-info {
+    height: 350px; } }
+
+@media (max-width: 700px) {
+  .about-container .about .about-info {
+    height: 400px; } }
+
+@media (max-width: 485px) {
+  .about-container .about .about-info {
+    height: 600px; } }
+
+@media (max-width: 955px) {
+  .about-container .about .help-info {
+    height: 500px; } }
+
+@media (max-width: 690px) {
+  .about-container nav .nav-container .navlinks .nav-divider {
+    display: none; }
+  .about-container nav .nav-container .navlinks .login-container {
+    display: none; }
+  .about-container .loginmenu {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(16, 17, 40, 0.98);
+    display: flex;
+    padding: 20px;
+    justify-content: center; }
+    .about-container .loginmenu .logintwo {
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      .about-container .loginmenu .logintwo p {
+        padding-left: 35px; }
+    .about-container .loginmenu .signuptwo {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      .about-container .loginmenu .signuptwo p {
+        padding-left: 35px; } }
+
+.event-container {
+  background-color: #101128;
+  width: 100%; }
+  .event-container h1,
+  .event-container h2,
+  .event-container h3,
+  .event-container h4,
+  .event-container h5,
+  .event-container h6,
+  .event-container p {
+    font-family: 'Khand', sans-serif; }
+  .event-container nav {
+    font-family: 'Khand', sans-serif;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px; }
+    .event-container nav .nav-container {
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      justify-content: space-between; }
+      .event-container nav .nav-container .navlinks {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        justify-content: center; }
+        .event-container nav .nav-container .navlinks a {
+          text-decoration: none;
+          color: white;
+          padding: 20px;
+          margin-top: 10px; }
+        .event-container nav .nav-container .navlinks .nav-divider {
+          margin-left: 20px;
+          margin-top: 13px;
+          height: 50px;
+          width: 2px;
+          background-color: grey; }
+        .event-container nav .nav-container .navlinks .login-container {
+          padding-left: 50px;
+          float: right;
+          height: 100px;
+          width: 300px;
+          display: flex;
+          flex-direction: row;
+          margin-top: 15px; }
+          .event-container nav .nav-container .navlinks .login-container .login {
+            padding-bottom: 10px;
+            background-color: #4f7aff;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            text-align: center;
+            margin-right: 20px;
+            cursor: pointer; }
+          .event-container nav .nav-container .navlinks .login-container .signup {
+            padding-bottom: 10px;
+            background-color: #4f7aff;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer; }
+  .event-container .loginmenu {
+    height: 150px;
+    width: 100%;
+    background-color: #101128;
+    display: none; }
+    .event-container .loginmenu .logintwo {
+      display: none; }
+    .event-container .loginmenu .signuptwo {
+      display: none; }
+  .event-container .title {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/sky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    color: white;
+    text-shadow: 2px 2px black; }
+    .event-container .title h1 {
+      padding-top: 25px;
+      margin-left: 85px;
+      font-size: 30px; }
+  .event-container .event-content {
+    height: 1000px;
+    width: 100%; }
+    .event-container .event-content .inputSports {
+      margin-top: 50px;
+      border-top: 2px solid grey;
+      border-bottom: 2px solid grey;
+      color: white; }
+      .event-container .event-content .inputSports p {
+        margin-left: 85px; }
+      .event-container .event-content .inputSports #eventzip {
+        margin-left: 85px;
+        border-radius: 20px;
+        border: .25px solid; }
+      .event-container .event-content .inputSports #getEvent {
+        margin-left: 85px;
+        outline-style: none;
+        cursor: pointer;
+        color: white;
+        height: 40px;
+        width: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        background-color: #4f7aff;
+        border: none; }
+    .event-container .event-content .event-sports {
+      background-color: #101128;
+      height: 100%;
+      width: 100%;
+      color: white; }
+      .event-container .event-content .event-sports h2 {
+        margin-left: 85px; }
+      .event-container .event-content .event-sports p {
+        margin-left: 85px;
+        color: white; }
+
+@media (max-width: 690px) {
+  .event-container nav .nav-container .navlinks .nav-divider {
+    display: none; }
+  .event-container nav .nav-container .navlinks .login-container {
+    display: none; }
+  .event-container .loginmenu {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(16, 17, 40, 0.98);
+    display: flex;
+    padding: 20px;
+    justify-content: center; }
+    .event-container .loginmenu .logintwo {
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      .event-container .loginmenu .logintwo p {
+        padding-left: 35px; }
+    .event-container .loginmenu .signuptwo {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 10px;
+      background-color: #4f7aff;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      cursor: pointer; }
+      .event-container .loginmenu .signuptwo p {
+        padding-left: 35px; } }

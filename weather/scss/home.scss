@@ -1,0 +1,319 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    
+    padding: 0;
+    margin: 0;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-family: 'Khand', sans-serif;
+    }
+    .container {
+        /*
+        background-image: linear-gradient( rgba(16, 17, 40,.985),rgba(16, 17, 40,.98)),url(../images/background.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        */
+        background-color: rgb(16, 17, 40);
+        width: 100%;
+
+    nav {
+        font-family: 'Khand', sans-serif;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 50px;
+    .nav-container {
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        justify-content: space-between;
+        .navlinks {
+            display: flex;
+            margin: 0 auto;
+            width: 100%;          
+            text-align: center;
+            //background-color: aqua;
+           justify-content: center;
+    
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+                margin-top: 10px;
+            }
+            .nav-divider {
+                margin-left: 20px;
+                margin-top: 13px;
+                height: 50px;
+                width: 2px;
+                background-color: grey;
+            }
+            .login-container {
+                padding-left: 50px;
+                float: right;
+                height: 100px;
+                width: 300px;
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+                .login {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+                .signup {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+    
+        
+    
+    }
+
+    .loginmenu {
+        height: 150px;
+        width: 100%;
+        background-color: rgb(16, 17, 40);
+        display: none;
+        .logintwo {
+            display: none;
+        }
+        .signuptwo {
+            display: none;
+        }
+
+    }
+    
+    .title {
+        background-image: linear-gradient( rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/sky.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        color: white;
+        text-shadow: 2px 2px black;
+        
+        h1 {
+            padding-top: 25px;
+            margin-left: 85px;
+            font-size: 30px;
+        }
+    }
+
+    .inputBox {
+        height: 1000px;
+        margin-top: 50px;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        
+        color: white;
+        p {
+            margin-left: 85px;
+        }
+        #zipcode {
+            margin-left: 85px;
+            border-radius: 20px;
+            border: .25px solid;
+        }
+        #days {
+            margin-left: 85px;
+            border-radius: 20px;
+            border: .25px solid;
+        }
+        #getWeather {
+            margin-left: 85px;
+            outline-style: none;
+            cursor: pointer;
+            color: white;
+            height: 40px;
+            width: 100px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background-color: rgb(79, 122, 255);
+            border: none;
+            
+        }
+
+    }
+
+    
+    .location-content {
+        color: white;
+        background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,.75)),url(../images/country.jpg);
+        
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover;
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        background-color:rgb(16, 17, 40);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        text-align: center;
+
+        .city {
+            text-align: center;
+            margin: auto;
+            //border: 2px solid lightgray;
+            //border-radius: 20px;;
+            width: 100%;
+            height: 75px;
+           background-color: rgba(16, 17, 40,.5);
+            font-size: 60px;
+        }
+    }
+    .current-content {
+        margin-top: 50px;
+        color: white;
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        padding-top: 5px;
+        padding-bottom: 50px;
+        padding-left: 5px;
+       
+        .currentTitle {
+            margin-top: 50px;
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,.75)),url(../images/current.jpg);
+        
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: cover;
+            
+            h2 {
+                padding-top: 35px;
+                font-size: 30px;
+                margin-left: 85px;
+            }
+        }
+        
+        
+        h3 {
+            margin-left: 85px;
+        }
+        p {
+            margin-left: 85px;
+        }
+        
+        .condition {
+           color: white;
+            height: 50px;
+            width: 100%;
+            font-size: 30px;
+        }
+       
+        
+    }
+    .forecastTitle {
+        margin-top: 50px;
+        color: white;
+        width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,.75)),url(../images/sunset.jpg);
+        
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: cover;
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 25px;
+        }
+    }
+    .forecast-content {
+        color: white;
+        display: flex;
+        margin: auto;
+        display: flex;
+        text-align: center;
+        p {
+        
+        }
+    }
+    }
+        
+}
+
+@media (max-width: 690px) {
+    body {
+        .container {
+            nav {
+                .nav-container {
+                    .navlinks {
+                        .nav-divider{
+                            display: none;
+                        }
+                        .login-container {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+       
+            .loginmenu {
+                height: 50px;
+                width: 100%;
+                background-color: rgba(16, 17, 40, .98);
+                display: flex;
+                padding: 20px;
+                justify-content: center;
+                .logintwo {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    cursor: pointer;
+                    p {
+                        padding-left: 35px;
+                    }
+                }
+                .signuptwo {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    cursor: pointer;
+                    p {
+                        padding-left: 35px;
+                    }
+                }
+            }
+        
+    }
+    }
+    
+}

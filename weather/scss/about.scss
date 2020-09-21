@@ -1,0 +1,238 @@
+.about-container {
+    background-color: rgb(16, 17, 40);
+    width: 100%;
+    nav {
+        font-family: 'Khand', sans-serif;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 50px;
+    .nav-container {
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+        justify-content: space-between;
+        .navlinks {
+            display: flex;
+            margin: 0 auto;
+            width: 100%;          
+            text-align: center;
+            //background-color: aqua;
+           justify-content: center;
+    
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+                margin-top: 10px;
+            }
+            .nav-divider {
+                margin-left: 20px;
+                margin-top: 13px;
+                height: 50px;
+                width: 2px;
+                background-color: grey;
+            }
+            .login-container {
+                padding-left: 50px;
+                float: right;
+                height: 100px;
+                width: 300px;
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+                .login {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+                .signup {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+    
+        
+    
+    }
+
+    .loginmenu {
+        height: 150px;
+        width: 100%;
+        background-color: rgb(16, 17, 40);
+        display: none;
+        .logintwo {
+            display: none;
+        }
+        .signuptwo {
+            display: none;
+        }
+
+    }
+    
+    .title {
+        background-image: linear-gradient( rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../images/sky.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        color: white;
+        text-shadow: 2px 2px black;
+        
+        h1 {
+            padding-top: 25px;
+            margin-left: 85px;
+            font-size: 30px;
+        }
+    }
+
+    .about {
+        height: 1000px;
+            margin-top: 50px;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            .about-title {
+                width: 70%;
+                margin: 0 auto;
+                h3 {
+                    color: white;
+                    font-size: 30px;
+                    
+                }
+            }
+            .about-info {
+                width: 70%;
+                height: 200px;
+                background: white;
+                opacity: .5;
+                margin: 0 auto;
+               
+                p {
+                    font-size: 20px;
+                    padding: 10px;
+                }
+            }
+            .help-info {
+                width: 70%;
+                height: 400px;
+                background: white;
+                opacity: .5;
+                margin: 0 auto;
+               
+                p {
+                    font-size: 20px;
+                    padding: 10px;
+                }
+            }
+    }
+}
+
+@media (max-width: 930px) {
+    .about-container {
+        .about {
+            .about-info {
+                height: 350px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 700px) {
+    .about-container {
+        .about {
+            .about-info {
+                height: 400px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 485px) {
+    .about-container {
+        .about {
+            .about-info {
+                height: 600px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 955px) {
+    .about-container {
+        .about {
+            .help-info {
+                height: 500px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .about-container {
+            nav {
+                .nav-container {
+                    .navlinks {
+                        .nav-divider{
+                            display: none;
+                        }
+                        .login-container {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+       
+            .loginmenu {
+                height: 50px;
+                width: 100%;
+                background-color: rgba(16, 17, 40, .98);
+                display: flex;
+                padding: 20px;
+                justify-content: center;
+                .logintwo {
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    cursor: pointer;
+                    p {
+                        padding-left: 35px;
+                    }
+                }
+                .signuptwo {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    padding-bottom: 10px;
+                    background-color:  rgb(79, 122, 255);
+                    height: 40px;
+                    width: 100px;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    cursor: pointer;
+                    p {
+                        padding-left: 35px;
+                    }
+                }
+            }
+        
+    }
+    }
+    
