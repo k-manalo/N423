@@ -2,8 +2,8 @@
 
 var _db;
 var fakeData = {
-    fName: 'Kyle',
-    lName: 'Manalo',
+    fName: 'Test',
+    lName: 'Testing',
 }
 
 var classData = [
@@ -38,16 +38,16 @@ var classData = [
         "survival": -1,
         "armor": [
             {
-                "helm": "Iron Kettle Helm",
+                "item": "Iron Kettle Helm",
                 "rating": 7
             },
             {
-                "shield": "Wooden Round Shield",
+                "item": "Wooden Round Shield",
                 "rating": 7
             },
             
         ],
-        "weapons": [
+        "weapon": [
             {
                 "weapon": "Hand-Me-Down Axe",
                 "attack": 3,
@@ -87,21 +87,25 @@ var classData = [
         "sleight": -3,
         "stealth": -3,
         "survival": 2,
-        "equipment": [
+        "armor": [
             {
-                "helm": "Apprentice Hat",
+                "item": "Apprentice Hat",
                 "rating": 2
             },
             {
-                "chest": "Apprentice Robes",
+                "item": "Apprentice Robe",
                 "rating": 3
             },
+            
+        ],
+        "weapon": [
             {
-                "spell": "Hand-Me-Down Axe",
+                "weapon": "Fireball",
                 "attack": 9,
                 "type": "int",
                 "damage": "fire"
             },
+
         ]
     },
     {
@@ -133,21 +137,25 @@ var classData = [
         "sleight": 3,
         "stealth": 3,
         "survival": 1,
-        "equipment": [
+        "armor": [
             {
-                "chest": "Leather Jerkin",
+                "item": "Hunter's Hat",
+                "rating": 2
+            },
+            {
+                "item": "Leather Jerkin",
                 "rating": 5
             },
-            {
-                "legs": "Scale Tights",
-                "rating": 4
-            },
+            
+        ],
+        "weapon": [
             {
                 "weapon": "Longbow",
                 "attack": 5,
                 "type": "dex",
                 "damage": "pierce"
             },
+
         ]
     },
     {
@@ -179,21 +187,25 @@ var classData = [
         "sleight": 1,
         "stealth": 1,
         "survival": -2,
-        "equipment": [
+        "armor": [
             {
-                "helm": "Fancy Hat",
-                "rating": 1
+                "item": "Funny Hat",
+                "rating": 2
             },
             {
-                "legs": "Cheap Overcoat",
-                "rating": 1
+                "item": "Cheap Overcoat",
+                "rating": 3
             },
+            
+        ],
+        "weapon": [
             {
-                "Instrument": "Lute",
-                "attack": 2,
+                "weapon": "Lute",
+                "attack": 3,
                 "type": "cha",
-                "damage": "dmg str"
+                "damage": "Boost Str"
             },
+
         ]
     },
     {
@@ -225,21 +237,25 @@ var classData = [
         "sleight": -2,
         "stealth": -2,
         "survival": 0,
-        "equipment": [
+        "armor": [
             {
-                "helm": "Visored Helm",
-                "rating": 8
-            },
-            {
-                "legs": "Standard Platemail",
+                "item": "Standard Platemail",
                 "rating": 10
             },
             {
-                "weapon": "Broasword",
-                "attack": 5,
+                "item": "Kite Shield",
+                "rating": 8
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Broadsword",
+                "attack": 6,
                 "type": "str",
                 "damage": "slash"
             },
+
         ]
     },
     {
@@ -271,20 +287,25 @@ var classData = [
         "sleight": -2,
         "stealth": -2,
         "survival": 3,
-        "equipment": [
+        "armor": [
             {
-                "helm": "Ceremonial Wreath",
-                "rating": 3
+                "item": "Ceremonial Wreath Crown",
+                "rating": 2
             },
             {
-                "chest": "Ceremonial Robes",
-                "rating": 3
+                "item": "Dirty Robes",
+                "rating": 4
             },
+            
+        ],
+        "weapon": [
             {
-                "spell": "Shield",
-                "attack (wis)": 5,
-                "damage": "Boost Armor"
+                "weapon": "Shield Companions",
+                "attack": 5,
+                "type": "wis",
+                "damage": "Boost Armor Rating"
             },
+
         ]
     },
     {
@@ -315,7 +336,27 @@ var classData = [
         "religion": -2,
         "sleight": 3,
         "stealth": 3,
-        "survival": -1
+        "survival": -1,
+        "armor": [
+            {
+                "item": "Thief Mask",
+                "rating": 3
+            },
+            {
+                "item": "Buckler",
+                "rating": 6
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Street Dagger",
+                "attack": 4,
+                "type": "dex",
+                "damage": "pierce"
+            },
+
+        ]
     },
     {
         "name": 'Cleric',
@@ -345,7 +386,27 @@ var classData = [
         "religion": 2,
         "sleight": -3,
         "stealth": -3,
-        "survival": 0
+        "survival": 0,
+        "armor": [
+            {
+                "item": "Holy Robes",
+                "rating": 3
+            },
+            {
+                "item": "Holy Chainmail",
+                "rating": 7
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Heal Party",
+                "attack": 3,
+                "type": "int",
+                "damage": "Heal Party Members"
+            },
+
+        ]
     },
     {
         "name": 'Witch Hunter',
@@ -375,7 +436,27 @@ var classData = [
         "religion": -2,
         "sleight": 0,
         "stealth": 0,
-        "survival": 1
+        "survival": 1,
+        "armor": [
+            {
+                "item": "Black Leather Combat Jacket",
+                "rating": 6
+            },
+            {
+                "item": "Stitched Trousers",
+                "rating": 4
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Longsword",
+                "attack": 6,
+                "type": "str",
+                "damage": "slash"
+            },
+
+        ]
     },
     {
         "name": 'Warlock',
@@ -405,7 +486,27 @@ var classData = [
         "religion": -1,
         "sleight": -1,
         "stealth": -1,
-        "survival": 0
+        "survival": 0,
+        "armor": [
+            {
+                "item": "Bone Armor",
+                "rating": 8
+            },
+            {
+                "item": "Heretical Robes",
+                "rating": 3
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Acid Splash",
+                "attack": 8,
+                "type": "int",
+                "damage": "Acid"
+            },
+
+        ]
     },
     {
         "name": 'Barbarian',
@@ -435,7 +536,27 @@ var classData = [
         "religion": -3,
         "sleight": 0,
         "stealth": 0,
-        "survival": -2
+        "survival": -2,
+        "armor": [
+            {
+                "item": "Fur Pants",
+                "rating": 4
+            },
+            {
+                "item": "Horned Helmet",
+                "rating": 5
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Great Axe",
+                "attack": 10,
+                "type": "str",
+                "damage": "slash"
+            },
+
+        ]
         
     },
     {
@@ -466,7 +587,27 @@ var classData = [
         "religion": 0,
         "sleight": 2,
         "stealth": 2,
-        "survival": 0
+        "survival": 0,
+        "armor": [
+            {
+                "item": "Assassin's Hood",
+                "rating": 3
+            },
+            {
+                "item": "Common Shirt",
+                "rating": 3
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Curved Dagger",
+                "attack": 5,
+                "type": "str",
+                "damage": "slash"
+            },
+
+        ]
     },
     {
         "name": 'Paladin',
@@ -496,7 +637,27 @@ var classData = [
         "religion": 1,
         "sleight": -1,
         "stealth": -1,
-        "survival": -1
+        "survival": -1,
+        "armor": [
+            {
+                "item": "Full Helm",
+                "rating": 8
+            },
+            {
+                "item": "Tower Shield",
+                "rating": 10
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Holy Mace",
+                "attack": 9,
+                "type": "str",
+                "damage": "Crush"
+            },
+
+        ]
     },
     {
         "name": 'Pirate',
@@ -526,7 +687,27 @@ var classData = [
         "religion": -2,
         "sleight": 1,
         "stealth": 1,
-        "survival": -2
+        "survival": -2,
+        "armor": [
+            {
+                "item": "Pirate Hat",
+                "rating": 2
+            },
+            {
+                "item": "Captain's Coat",
+                "rating": 4
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Cutlass",
+                "attack": 6,
+                "type": "str",
+                "damage": "slash"
+            },
+
+        ]
     },
     {
         "name": 'Beggar',
@@ -556,7 +737,27 @@ var classData = [
         "religion": -2,
         "sleight": 0,
         "stealth": 0,
-        "survival": -2
+        "survival": -2,
+        "armor": [
+            {
+                "item": "Beggar's Rags",
+                "rating": 2
+            },
+            {
+                "item": "Sandals",
+                "rating": 1
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Wooden Club",
+                "attack": 3,
+                "type": "str",
+                "damage": "Crush"
+            },
+
+        ]
     },
     {
         "name": 'Merchant',
@@ -586,7 +787,27 @@ var classData = [
         "religion": 0,
         "sleight": -2,
         "stealth": -2,
-        "survival": 0
+        "survival": 0,
+        "armor": [
+            {
+                "item": "Fancy Coat",
+                "rating": 4
+            },
+            {
+                "item": "Trendy Tights",
+                "rating": 3
+            },
+            
+        ],
+        "weapon": [
+            {
+                "weapon": "Jewelled Rapier",
+                "attack": 7,
+                "type": "dex",
+                "damage": "pierce"
+            },
+
+        ]
     }
 
 
@@ -896,6 +1117,18 @@ function initListeners() {
         let survival = "";
         
         let armor = "";
+        var armori = [
+            {
+
+            },
+        ];
+       let armorA = "";
+       let armorB = "";
+
+       let wName = "";
+       let wAttack = "";
+       let wType = "";
+       let wDamage = "";
 
 
 
@@ -906,11 +1139,35 @@ function initListeners() {
         let language = "";
         let speed  = "";
         
-        //----------default class
+        //----------default class-----------------------
+
+        //armor
+        for(i = 1; i <= classData[0].armor.length; i++) {
+            console.log(i)
+            if(i == 1) {
+
+                armorA = classData[classCount].armor[0].item
+                console.log(armorA)
+              
+                armor = classData[classCount].armor[0].rating
+                console.log(armor)
+            
+            } if(i > 1) {
+                let a = i - 1
+
+                armorB = classData[classCount].armor[a].item
+                console.log(armorB)
+
+                armor = armor + classData[classCount].armor[a].rating
+                console.log(armor)
+
+            }
+        }
 
         $(".className").append(classData[0].name)
 
         selectedClass = classData[0].name
+
 
         $(".level-con").append(level)
         $(".hp-con").append(classData[0].hp)
@@ -941,8 +1198,22 @@ function initListeners() {
         $(".cSte").append(classData[0].stealth)
         $(".cSur").append(classData[0].survival)
 
+        $(".weaponName").html(classData[0].weapon[0].weapon)
+        $(".weaponAttack").html(classData[0].weapon[0].attack)
+        $(".weaponType").html(classData[0].weapon[0].type)
+        $(".weaponDamage").html(classData[0].weapon[0].damage)
+
+        $(".armor").html(armorA)
+        $(".armor").append(armorB)
+
         level = level;
-        armor = armor
+        armor = armor;
+        armorA = armorA;
+        armorB = armorB;
+        wName = classData[0].weapon[0].weapon;
+        wAttack = classData[0].weapon[0].attack;
+        wType = classData[0].weapon[0].type;
+        wDamage = classData[0].weapon[0].damage;
         gp = classData[0].gp;
         hp = classData[0].hp;
         initiative = classData[0].initiative;
@@ -975,15 +1246,48 @@ function initListeners() {
         //----------default race
 
         $(".raceName").append(raceData[0].race)
+        $(".language").html(raceData[0].language)
+        $(".speed").html(raceData[0].speed)
+
         selectedRace = raceData[0].race
+        language = raceData[0].language
+        speed = raceData[0].speed
         console.log(selectedRace)
 
         //-------------------switch class-----------------------------
 
         //-----------------last class click--------------------
         $(".lastClassBtn").click(function() {
+            console.log("last clicked")
             classCount = classCount - 1;
             if(classCount < 0) {
+
+               //armor
+
+                let armor = "";
+             
+                for(i = 1; i <= classData[15].armor.length; i++) {
+                    console.log(i)
+                    if(i == 1) {
+
+                        armorA = classData[15].armor[0].item
+                        console.log(armorA)
+                        
+                        armor = classData[15].armor[0].rating
+                        console.log(armor)
+
+                    } if(i > 1) {
+                        let a = i - 1
+
+                        armorB = classData[15].armor[a].item
+                        console.log(armorB)
+
+                        armor = armor + classData[15].armor[a].rating
+                        console.log(armor)
+
+                    }
+                }
+
                 $(".className").html(classData[15].name)
                 classCount = 15;
 
@@ -991,6 +1295,7 @@ function initListeners() {
 
                 $(".level-con").html(level)
                 $(".hp-con").html(classData[15].hp)
+                $(".armor-con").html(armor)
                 $(".gp-con").html(classData[15].gp)
                 $(".cStr").html(classData[15].strength)
                 $(".cDex").html(classData[15].dexterity)
@@ -1016,14 +1321,26 @@ function initListeners() {
                 $(".cSle").html(classData[15].sleight)
                 $(".cSte").html(classData[15].stealth)
                 $(".cSur").html(classData[15].survival)
+                $(".weaponName").html(classData[15].weapon[0].weapon)
+                $(".weaponAttack").html(classData[15].weapon[0].attack)
+                $(".weaponType").html(classData[15].weapon[0].type)
+                $(".weaponDamage").html(classData[15].weapon[0].damage)
+                
+                $(".armor").html(armorA)
+                $(".armor").append(armorB)
+
+
                 
                 
 
-
-                //armor
-                
-
-                level = level
+                level = level;
+                armor = armor;
+                armorA = armorA;
+                armorB = armorB;
+                wName = classData[15].weapon[0].weapon;
+                wAttack = classData[15].weapon[0].attack;
+                wType = classData[15].weapon[0].type;
+                wDamage = classData[15].weapon[0].damage;
                 gp = classData[15].gp;
                 hp = classData[15].hp;
                 initiative = classData[15].initiative;
@@ -1052,11 +1369,37 @@ function initListeners() {
                 stealth = classData[15].stealth;
                 survival = classData[15].survival;
             } else {
+
+                //armor
+
+                for(i = 1; i <= classData[classCount].armor.length; i++) {
+                    console.log(i)
+                    if(i == 1) {
+
+                        armorA = classData[classCount].armor[0].item
+                        console.log(armorA)
+
+                        armor = classData[classCount].armor[0].rating
+                        console.log(armor)
+
+
+                    } if(i > 1) {
+                        let a = i - 1
+
+                        armorB = classData[classCount].armor[a].item
+                        console.log(armorB)
+
+                        armor = armor + classData[classCount].armor[a].rating
+                        console.log(armor)
+                    }
+                }
+
                 $(".className").html(classData[classCount].name)
                 selectedClass = classData[classCount].name
 
                 $(".level-con").html(level)
                 $(".hp-con").html(classData[classCount].hp)
+                $(".armor-con").html(armor)
                 $(".gp-con").html(classData[classCount].gp)
                 $(".cStr").html(classData[classCount].strength)
                 $(".cDex").html(classData[classCount].dexterity)
@@ -1082,22 +1425,22 @@ function initListeners() {
                 $(".cSle").html(classData[classCount].sleight)
                 $(".cSte").html(classData[classCount].stealth)
                 $(".cSur").html(classData[classCount].survival)
+                $(".weaponName").html(classData[classCount].weapon[0].weapon)
+                $(".weaponAttack").html(classData[classCount].weapon[0].attack)
+                $(".weaponType").html(classData[classCount].weapon[0].type)
+                $(".weaponDamage").html(classData[classCount].weapon[0].damage)
 
+                $(".armor").html(armorA)
+                $(".armor").append(armorB)
 
-                //DO NOT RUN WILL BREAK PC
-                // for(i = 0; i <= classData[classCount].armor.length; i++) {
-                //     console.log(i)
-                //     if(i = 0) {
-                //         armor = classData[classCount].armor[0].rating
-                //         console.log(armor)
-                //     } else {
-                //         armor = armor + classData[classCount].armor[i].rating
-                //         console.log(armor)
-                //     }
-                // }
-
-                
+                armor = armor
                 level = level;
+                armorA = armorA;
+                armorB = armorB;
+                wName = classData[classCount].weapon[0].weapon;
+                wAttack = classData[classCount].weapon[0].attack;
+                wType = classData[classCount].weapon[0].type;
+                wDamage = classData[classCount].weapon[0].damage;
                 gp = classData[classCount].gp;
                 hp = classData[classCount].hp;
                 initiative = classData[classCount].initiative;
@@ -1133,6 +1476,29 @@ function initListeners() {
         $(".nextClassBtn").click(function() {
             classCount = classCount + 1;
             if(classCount > 15) {
+
+                //armor
+                for(i = 1; i <= classData[0].armor.length; i++) {
+                    console.log(i)
+                    if(i == 1) {
+
+                        armorA = classData[0].armor[0].item
+                        console.log(armorA)
+
+                        armor = classData[0].armor[0].rating
+                        console.log(armor)
+                    } if(i > 1) {
+                        let a = i - 1
+
+                        armorB = classData[0].armor[a].item
+                        console.log(armorB)
+
+                        armor = armor + classData[0].armor[a].rating
+                        console.log(armor)
+                    }
+                }
+
+
                 $(".className").html(classData[0].name)
                 classCount = 0;
 
@@ -1141,6 +1507,7 @@ function initListeners() {
                 
                 $(".level-con").html(level)
                 $(".hp-con").html(classData[0].hp)
+                $(".armor-con").html(armor)
                 $(".gp-con").html(classData[0].gp)
                 $(".cStr").html(classData[0].strength)
                 $(".cDex").html(classData[0].dexterity)
@@ -1166,8 +1533,22 @@ function initListeners() {
                 $(".cSle").html(classData[0].sleight)
                 $(".cSte").html(classData[0].stealth)
                 $(".cSur").html(classData[0].survival)
+                $(".weaponName").html(classData[0].weapon[0].weapon)
+                $(".weaponAttack").html(classData[0].weapon[0].attack)
+                $(".weaponType").html(classData[0].weapon[0].type)
+                $(".weaponDamage").html(classData[0].weapon[0].damage)
+
+                $(".armor").html(armorA)
+                $(".armor").append(armorB)
 
                 level = level;
+                armor = armor
+                armorA = armorA;
+                armorB = armorB;
+                wName = classData[0].weapon[0].weapon;
+                wAttack = classData[0].weapon[0].attack;
+                wType = classData[0].weapon[0].type;
+                wDamage = classData[0].weapon[0].damage;
                 gp = classData[0].gp;
                 hp = classData[0].hp;
                 initiative = classData[0].initiative;
@@ -1196,11 +1577,33 @@ function initListeners() {
                 stealth = classData[0].stealth;
                 survival = classData[0].survival;
             } else {
+
+                //armor
+                for(i = 1; i <= classData[classCount].armor.length; i++) {
+                    console.log(i)
+                    if(i == 1) {
+                        armorA = classData[classCount].armor[0].item
+                        console.log(armorA)
+
+                        armor = classData[classCount].armor[0].rating
+                        console.log(armor)
+                    } if(i > 1) {
+                        let a = i - 1
+
+                        armorB = classData[classCount].armor[a].item
+                        console.log(armorB)
+
+                        armor = armor + classData[classCount].armor[a].rating
+                        console.log(armor)
+                    }
+                }
+
                 $(".className").html(classData[classCount].name)
                 selectedClass = classData[classCount].name
 
                 $(".level-con").html(level)
                 $(".hp-con").html(classData[classCount].hp)
+                $(".armor-con").html(armor)
                 $(".gp-con").html(classData[classCount].gp)
                 $(".cStr").html(classData[classCount].strength)
                 $(".cDex").html(classData[classCount].dexterity)
@@ -1226,8 +1629,22 @@ function initListeners() {
                 $(".cSle").html(classData[classCount].sleight)
                 $(".cSte").html(classData[classCount].stealth)
                 $(".cSur").html(classData[classCount].survival)
+                $(".weaponName").html(classData[classCount].weapon[0].weapon)
+                $(".weaponAttack").html(classData[classCount].weapon[0].attack)
+                $(".weaponType").html(classData[classCount].weapon[0].type)
+                $(".weaponDamage").html(classData[classCount].weapon[0].damage)
+
+                $(".armor").html(armorA)
+                $(".armor").append(armorB)
                 
                 level = level;
+                armor = armor;
+                armorA = armorA;
+                armorB = armorB;
+                wName = classData[classCount].weapon[0].weapon;
+                wAttack = classData[classCount].weapon[0].attack;
+                wType = classData[classCount].weapon[0].type;
+                wDamage = classData[classCount].weapon[0].damage;
                 gp = classData[classCount].gp;
                 hp = classData[classCount].hp;
                 initiative = classData[classCount].initiative;
@@ -1267,7 +1684,11 @@ function initListeners() {
             raceCount = raceCount - 1;
             if(raceCount < 0) {
                 $(".raceName").html(raceData[5].race)
+                $(".language").html(raceData[5].language)
+                $(".speed").html(raceData[5].speed)
+
                 raceCount = 5;
+
                 selectedRace = raceData[5].race;
                 language = raceData[5].language;
                 speed = raceData[5].speed;
@@ -1275,6 +1696,8 @@ function initListeners() {
                 
             } else {
                 $(".raceName").html(raceData[raceCount].race)
+                $(".language").html(raceData[raceCount].language)
+                $(".speed").html(raceData[raceCount].speed)
                 selectedRace = raceData[raceCount].race
                 language = raceData[raceCount].language;
                 speed = raceData[raceCount].speed;
@@ -1288,12 +1711,16 @@ function initListeners() {
             raceCount = raceCount + 1;
             if(raceCount > 5) {
                 $(".raceName").html(raceData[0].race)
+                $(".language").html(raceData[0].language)
+                $(".speed").html(raceData[0].speed)
                 raceCount = 0;
                 selectedRace = raceData[0].race
                 language = raceData[0].language;
                 speed = raceData[0].speed;
             } else {
                 $(".raceName").html(raceData[raceCount].race)
+                $(".language").html(raceData[raceCount].language)
+                $(".speed").html(raceData[raceCount].speed)
                 selectedRace = raceData[raceCount].race
                 language = raceData[raceCount].language;
                 speed = raceData[raceCount].speed;
@@ -1317,6 +1744,27 @@ function initListeners() {
                 pbonus: pbonus,
                 gp: gp,
                 hp: hp,
+                armor: armor,
+                armorI: [
+                    {
+                        armorA: armorA
+                    },
+                    {
+                        armorB: armorB
+                    },
+                ],
+                weapons: [
+                    {
+                        w1: [
+                            {
+                                name: wName,
+                                attack: wAttack,
+                                type: wType,
+                                damage: wDamage,
+                            }
+                        ]
+                    }
+                ],
                 initiative: initiative,
                 strength: strength,
                 dexterity: dexterity,
@@ -1341,7 +1789,9 @@ function initListeners() {
                 religion: religion,
                 sleight: sleight,
                 stealth: stealth,
-                survival: survival
+                survival: survival,
+                traits: $("#create-traits").val(),
+                biography: $("#create-bio").val(),
               
             })  
                     
