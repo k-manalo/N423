@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D&D App</title>
 
+    <link rel="stylesheet" href="css/styles.css">
+
   </head>
   <body>
 
@@ -233,7 +235,21 @@
       <button id="createPlayerBtn">Create</button>
     </div>
 
-    
+    <div class="show-players-container" style="display: none">
+      <div class="players-container"></div>
+    </div>
+
+    <div class="playerSheet-container" style="display: none">
+      <h2 class="playerSheet-name">
+        
+      </h2>
+      <div class="playerSheet-stats">
+        <div class="playerStr">
+          <h3>Strength:</h3>
+          <div class="playerStr-data"></div>
+        </div>
+      </div>
+    </div>
 
     <div class="errorModal" style="display: none; background-color: red;">
       <div class="error-content">

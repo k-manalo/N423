@@ -992,6 +992,8 @@ function initListeners() {
             })
             alert($("#newRoomName").val() + " has been created")
     })
+
+    
 }
 
     //----------------------------------GET ROOMS-----------------------------------------
@@ -1075,6 +1077,35 @@ function initListeners() {
                 $("#newPlayerBtn").click(function() {
                     $(".character-create-sheet").css("display", "flex")
                     createCharacter(rPlayerId)
+                })
+
+                $("#loadPlayerBtn").click(function() {
+                    console.log("loadClicked")
+                    $(".show-players-container").css("display", "flex")
+
+
+                    var roomPlayers = _db
+                    .collection("DDUsers").doc("players").collection("player");
+                    roomPlayers
+                    .where('roomName', '==', rPlayerId)
+                    .get()
+                    .then(function(querySnapshot) {
+                        querySnapshot.forEach(function(doc) {
+                            let pData = doc.data()
+                            var id = doc.id;
+                            console.log(pData)
+
+                            console.log(roomPlayers)
+                            $(".players-container").append(`<div id="${id}" class="p-container">${pData.playerName}</div>`)
+                            console.log(pData.playerName)
+                        })
+                        $(".p-container").click(function(e) {
+                            var pID = e.currentTarget.id
+                            console.log(pID)
+                            loadCharacterSheetData(pID)
+                        })
+                        
+                    })
                 })
         })
     }
@@ -1797,6 +1828,21 @@ function initListeners() {
                     
         })
             
+    }
+
+    //----------------------------------LOAD CHARACTER SHEET-------------------------------
+
+    function loadCharacterSheetData(charID) {
+        $(".playerSheet-container").css("display", "flex")
+        _db
+        .collection("DDUsers").doc("players").collection("player").doc(charID)
+        .get()
+        .then(function(doc) {
+            let charData = doc.data()
+
+            $(".playerSheet-name").html(charData.playerName)
+        })
+
     }
 
 
