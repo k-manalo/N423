@@ -6,38 +6,69 @@
     <title>D&D App</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
 
   </head>
   <body>
 
-    <nav>
-      <div class="signin-content">
-        <div id="login">Login</div>
-        <div id="signup">Signup</div>
-      </div>
-      
-    </nav>
+    <div class="login-page">
 
-    <h1>D&D App</h1>
+      <div class="signin-content">
+        <div class="login-logo"></div>
+        <div class="login-page-login-btn">
+          <div id="login">
+            <h3>Login</h3>
+          </div>
+        </div>
+        <div class="login-page-signup-btn">
+          <div id="signup">
+            <h3>Signup</h3>
+          </div>
+        </div>
+        <div class="login-page-readme-btn">
+          <div id="readme">
+            <h3>ReadMe</h3>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="signupPage" style="display: none">
+        <div class="login-logo2"></div>
+        <div class="signup-content">
+          <h2>Signup</h2>
+          <input type="text" id="sEmail" placeholder="Email">
+          <input type="password" id="sPassword" placeholder="Password">
+          <div class="signup-btn-container">
+            <button id="signup-btn">Enter</button>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="loginPage" style="display: none;">
+        <div class="login-logo3"></div>
+        <div class="login-content">
+          <h2>Login</h2>
+          <input type="text" id="lEmail" placeholder="Email">
+          <input type="password" id="lPassword" placeholder="Password">
+          <div class="login-btn-container">
+            <button id="login-btn">Enter</button>
+            <button id="logout-btn">Logout</button>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+      
     <!--<button id="addData">Add Data</button>-->
     <!--<button id="getData">Get Data</button>-->
 
-    <div class="signupPage" style="display: none;">
-      <div class="signup-content">
-        <input type="text" id="sEmail" placeholder="Email">
-        <input type="password" id="sPassword" placeholder="Password">
-        <button id="signup-btn">Sign Up</button>
-      </div>
-    </div>
+    
 
-    <div class="loginPage">
-      <div class="login-content">
-        <input type="text" id="lEmail" placeholder="Email">
-        <input type="password" id="lPassword" placeholder="Password">
-        <button id="login-btn">Login</button>
-        <button id="logout-btn">Logout</button>
-      </div>
-    </div>
+    
 
     <div class="roomPage" style="display: none;">
       <div class="roomButtons">

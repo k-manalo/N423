@@ -1,0 +1,261 @@
+.login-page {
+    background-image: url(../images/corridor.gif);
+   
+    box-shadow: inset 300px 100px 100px -150px black, 
+                inset -300px 100px 100px -150px black;
+    height: 100%;
+    width: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    //background-color: red;
+    justify-content: center;
+    margin: 0 auto;
+    .signin-content {
+        //background-color: red;
+        width: 53%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .login-page-login-btn {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #login {
+                padding-top: 8px;
+               
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-login-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+
+        .login-page-signup-btn {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #signup {
+                padding-top: 8px;
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-signup-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+
+        .login-page-readme-btn {
+            cursor: pointer;
+            margin-top: 100px;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #readme {
+                padding-top: 8px;
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-readme-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+    }
+
+    .signupPage {
+        width: 53%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo2 {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .signup-content {
+            width: 53%;
+            margin: 0 auto;
+            text-align: center;
+            h2 {
+                margin-top: -30px;
+                margin-bottom: 25px;
+                color: rgb(236, 220, 80);
+                font-size: 35px;
+            }
+            #sEmail {
+                
+               
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #sEmail::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            #sPassword {
+                margin-top: 50px;
+                
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #sPassword::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .signup-btn-container {
+                #signup-btn {
+                    cursor: pointer;
+                    margin-top: 50px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+                #signup-btn:active {
+
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+            
+        }
+    }
+
+    .loginPage {
+        width: 53%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo3 {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .login-content {
+            width: 53%;
+            margin: 0 auto;
+            text-align: center;
+            h2 {
+                margin-top: -30px;
+                margin-bottom: 25px;
+                color: rgb(236, 220, 80);
+                font-size: 35px;
+            }
+            #lEmail {
+                
+               
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #lEmail::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            #lPassword {
+                margin-top: 50px;
+                
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #lPassword::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .login-btn-container {
+                #login-btn {
+                    cursor: pointer;
+                    margin-top: 50px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+                #login-btn:active {
+
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+            
+        }
+    }
+
+
+
+
+}

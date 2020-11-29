@@ -972,14 +972,14 @@ function initListeners() {
     $("#login").click(function() {
         console.log("Login Page");
         $(".signupPage").css("display", "none")
-
-        $(".loginPage").css("display", "flex")
+        $(".signin-content").css("display", "none")
+        $(".loginPage").css("display", "unset")
     })
     $("#signup").click(function() {
         console.log("Signup Page");
         $(".loginPage").css("display", "none")
-
-        $(".signupPage").css("display", "flex")
+        $(".signin-content").css("display", "none")
+        $(".signupPage").css("display", "unset")
     })
 
     //-------------------------------------------------ROOM (LOAD OR CREATE)------------------------
