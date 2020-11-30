@@ -255,7 +255,228 @@
         }
     }
 
+    .roomPage {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .room-logo {
+            margin-top: -250px;
+            background-image: url(../images/dungeonkeeperlogo.png);
+                height: 300px;
+                width: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 30px;
+        }
+        .roomButtons {
+            width: 53%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            #create-room-content-btn {
+                cursor: pointer;
+                margin: 0 auto;
+                width: 60%;
+                height: 70px;
+                background-color: tan;
+                border-radius: 100px;
+                margin-bottom: 50px;
+                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                font-family: 'Sansita Swashed', cursive;
+                font-size: 20px;
+                outline: none;
+            }
+            #create-room-content-btn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+            #find-room-content-btn {
+                cursor: pointer;
+                margin: 0 auto;
+                width: 60%;
+                height: 70px;
+                background-color: tan;
+                border-radius: 100px;
+                margin-bottom: 50px;
+                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                font-family: 'Sansita Swashed', cursive;
+                font-size: 20px;
+                outline: none;
+            }
+            #find-room-content-btn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+        }
+    
+    
+    
+        .create-room-content {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #newRoomName {
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #newRoomName::placeholder {
+                padding-left: 20px;
+                font-size: 17px;
+            }
+            #newRoomCode {
+                margin-top: 50px;
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+    
+            }
+            #newRoomCode::placeholder {
+                padding-left: 20px;
+                font-size: 17px;
+            }
+            #create-room-btn {
+                cursor: pointer;
+                        margin-top: 75px;
+                        border: none;
+                        width: 50%;
+                        height: 50px;
+                        border-radius: 100px;
+                        box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        background-color: tan;
+                        font-size: 20px;
+                        font-family: 'Sansita Swashed', cursive;
+                        outline: none;
+            }
+    
+            
+        }
+    
+        .find-room-content {
+            background-image: url(../images/scroll.png);
+            height: 500px;
+            width: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            .find-content-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                h2 {
+                    margin-top: 20px;
+                }
+                .roomList {
+                    margin: 0 auto;
+                    width: 80%;
+                    height: 100%;
+                    //background-color: red;
+                    .loadRoom {
+                        font-family: sans-serif;
+                        cursor: pointer;
+                        background-color: rgb(156, 137, 110);
+                        width: 100%;
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            
+        }
+    
+    
+        .room-created-modal {
+            position: absolute;
+            height: 200px;
+            width: 350px;
+            //background-color: tan;
+            box-shadow: 0px 0px 50px 20px black;
+            
+            .room-created-scroll {
+                position: absolute;
+                height: 275px;
+                width: 400px;
+                background-image: url(../images/scroll2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .room-created-message {
+                p {
+                    font-size: 25px;
+                }
+            }
+            .room-created-close {
+                cursor: pointer;
+                    margin-top: 75px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+            }
+        }
 
+        .roomCode-modal {
+            height: 200px;
+            width: 50%;
+           
+            .roomCode-container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                justify-content: center;
+                #inputCode {
+                    margin-top: 10px;
+                     width: 75%;
+                     height: 50px;
+                     background-color: rgb(255, 255, 255);
+                     border-radius: 100px;
+                     border: none;
+                 }
+                 #inputCode::placeholder {
+                    font-size: 17px;
+                    padding-left: 20px;
+                 }
+                 #enterCode {
+                     cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 50%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                 }
+            }
+            
+        }
+
+
+    }
 
 
 }

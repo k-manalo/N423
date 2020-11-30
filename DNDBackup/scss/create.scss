@@ -1,0 +1,37 @@
+.character-create-sheet {
+    height: 90%;
+    width: 90%;
+    background-color: tan;
+    .character-row1 {
+        .portrait-container {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            .portrait-items {
+                .p-helmet {
+                    background-image: url(../images/helmets/helmet1.png);
+                    width: 192px;
+                    height: 196px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .p-face {
+                    background-image: url(../images/faces/face2.png);
+                    width: 192px;
+                    height: 196px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .p-armor {
+                    background-image: url(../images/armor/armor1.png);
+                    width: 192px;
+                    height: 196px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                }
+            }
+        }
+    }
+    
+}

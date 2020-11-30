@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background-color: black; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+  font-family: 'Sansita Swashed', cursive; }
+
+.login-page {
+  background-image: url(../images/corridor.gif);
+  box-shadow: inset 300px 100px 100px -150px black,  inset -300px 100px 100px -150px black;
+  height: 100%;
+  width: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; }
+  .login-page .signin-content {
+    width: 53%;
+    margin: 0 auto;
+    text-align: center; }
+    .login-page .signin-content .login-logo {
+      background-image: url(../images/dungeonkeeperlogo.png);
+      height: 300px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 30px; }
+    .login-page .signin-content .login-page-login-btn {
+      cursor: pointer;
+      margin: 0 auto;
+      width: 50%;
+      height: 50px;
+      background-color: tan;
+      border-radius: 100px;
+      margin-bottom: 50px;
+      box-shadow: 0px 6px 3px 4px #eb2d2d; }
+      .login-page .signin-content .login-page-login-btn #login {
+        padding-top: 8px; }
+        .login-page .signin-content .login-page-login-btn #login h3 {
+          font-size: 25px; }
+    .login-page .signin-content .login-page-login-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0px 0px 3px 4px #ecdc50;
+      background-color: #9c896e; }
+    .login-page .signin-content .login-page-signup-btn {
+      cursor: pointer;
+      margin: 0 auto;
+      width: 50%;
+      height: 50px;
+      background-color: tan;
+      border-radius: 100px;
+      margin-bottom: 50px;
+      box-shadow: 0px 6px 3px 4px #eb2d2d; }
+      .login-page .signin-content .login-page-signup-btn #signup {
+        padding-top: 8px; }
+        .login-page .signin-content .login-page-signup-btn #signup h3 {
+          font-size: 25px; }
+    .login-page .signin-content .login-page-signup-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0px 0px 3px 4px #ecdc50;
+      background-color: #9c896e; }
+    .login-page .signin-content .login-page-readme-btn {
+      cursor: pointer;
+      margin-top: 100px;
+      margin: 0 auto;
+      width: 50%;
+      height: 50px;
+      background-color: tan;
+      border-radius: 100px;
+      box-shadow: 0px 6px 3px 4px #eb2d2d; }
+      .login-page .signin-content .login-page-readme-btn #readme {
+        padding-top: 8px; }
+        .login-page .signin-content .login-page-readme-btn #readme h3 {
+          font-size: 25px; }
+    .login-page .signin-content .login-page-readme-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0px 0px 3px 4px #ecdc50;
+      background-color: #9c896e; }
+  .login-page .signupPage {
+    width: 53%;
+    margin: 0 auto;
+    text-align: center; }
+    .login-page .signupPage .login-logo2 {
+      background-image: url(../images/dungeonkeeperlogo.png);
+      height: 300px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 30px; }
+    .login-page .signupPage .signup-content {
+      width: 53%;
+      margin: 0 auto;
+      text-align: center; }
+      .login-page .signupPage .signup-content h2 {
+        margin-top: -30px;
+        margin-bottom: 25px;
+        color: #ecdc50;
+        font-size: 35px; }
+      .login-page .signupPage .signup-content #sEmail {
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .signupPage .signup-content #sEmail::placeholder {
+        padding-left: 20px;
+        font-size: 20px; }
+      .login-page .signupPage .signup-content #sPassword {
+        margin-top: 50px;
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .signupPage .signup-content #sPassword::placeholder {
+        padding-left: 20px;
+        font-size: 20px; }
+      .login-page .signupPage .signup-content .signup-btn-container #signup-btn {
+        cursor: pointer;
+        margin-top: 50px;
+        border: none;
+        width: 50%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .login-page .signupPage .signup-content .signup-btn-container #signup-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+  .login-page .loginPage {
+    width: 53%;
+    margin: 0 auto;
+    text-align: center; }
+    .login-page .loginPage .login-logo3 {
+      background-image: url(../images/dungeonkeeperlogo.png);
+      height: 300px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 30px; }
+    .login-page .loginPage .login-content {
+      width: 53%;
+      margin: 0 auto;
+      text-align: center; }
+      .login-page .loginPage .login-content h2 {
+        margin-top: -30px;
+        margin-bottom: 25px;
+        color: #ecdc50;
+        font-size: 35px; }
+      .login-page .loginPage .login-content #lEmail {
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .loginPage .login-content #lEmail::placeholder {
+        padding-left: 20px;
+        font-size: 20px; }
+      .login-page .loginPage .login-content #lPassword {
+        margin-top: 50px;
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .loginPage .login-content #lPassword::placeholder {
+        padding-left: 20px;
+        font-size: 20px; }
+      .login-page .loginPage .login-content .login-btn-container #login-btn {
+        cursor: pointer;
+        margin-top: 50px;
+        border: none;
+        width: 50%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .login-page .loginPage .login-content .login-btn-container #login-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+  .login-page .roomPage {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .login-page .roomPage .room-logo {
+      margin-top: -250px;
+      background-image: url(../images/dungeonkeeperlogo.png);
+      height: 300px;
+      width: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 30px; }
+    .login-page .roomPage .roomButtons {
+      width: 53%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .login-page .roomPage .roomButtons #create-room-content-btn {
+        cursor: pointer;
+        margin: 0 auto;
+        width: 60%;
+        height: 70px;
+        background-color: tan;
+        border-radius: 100px;
+        margin-bottom: 50px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        font-family: 'Sansita Swashed', cursive;
+        font-size: 20px;
+        outline: none; }
+      .login-page .roomPage .roomButtons #create-room-content-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+      .login-page .roomPage .roomButtons #find-room-content-btn {
+        cursor: pointer;
+        margin: 0 auto;
+        width: 60%;
+        height: 70px;
+        background-color: tan;
+        border-radius: 100px;
+        margin-bottom: 50px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        font-family: 'Sansita Swashed', cursive;
+        font-size: 20px;
+        outline: none; }
+      .login-page .roomPage .roomButtons #find-room-content-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+    .login-page .roomPage .create-room-content {
+      width: 40%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .login-page .roomPage .create-room-content #newRoomName {
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .roomPage .create-room-content #newRoomName::placeholder {
+        padding-left: 20px;
+        font-size: 17px; }
+      .login-page .roomPage .create-room-content #newRoomCode {
+        margin-top: 50px;
+        width: 75%;
+        height: 50px;
+        background-color: white;
+        border-radius: 100px;
+        border: none; }
+      .login-page .roomPage .create-room-content #newRoomCode::placeholder {
+        padding-left: 20px;
+        font-size: 17px; }
+      .login-page .roomPage .create-room-content #create-room-btn {
+        cursor: pointer;
+        margin-top: 75px;
+        border: none;
+        width: 50%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+    .login-page .roomPage .find-room-content {
+      background-image: url(../images/scroll.png);
+      height: 500px;
+      width: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .login-page .roomPage .find-room-content .find-content-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .login-page .roomPage .find-room-content .find-content-container h2 {
+          margin-top: 20px; }
+        .login-page .roomPage .find-room-content .find-content-container .roomList {
+          margin: 0 auto;
+          width: 80%;
+          height: 100%; }
+          .login-page .roomPage .find-room-content .find-content-container .roomList .loadRoom {
+            font-family: sans-serif;
+            cursor: pointer;
+            background-color: #9c896e;
+            width: 100%;
+            font-size: 25px;
+            margin-bottom: 10px; }
+    .login-page .roomPage .room-created-modal {
+      position: absolute;
+      height: 200px;
+      width: 350px;
+      box-shadow: 0px 0px 50px 20px black; }
+      .login-page .roomPage .room-created-modal .room-created-scroll {
+        position: absolute;
+        height: 275px;
+        width: 400px;
+        background-image: url(../images/scroll2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .login-page .roomPage .room-created-modal .room-created-message p {
+        font-size: 25px; }
+      .login-page .roomPage .room-created-modal .room-created-close {
+        cursor: pointer;
+        margin-top: 75px;
+        border: none;
+        width: 50%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+    .login-page .roomPage .roomCode-modal {
+      height: 200px;
+      width: 50%; }
+      .login-page .roomPage .roomCode-modal .roomCode-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: center; }
+        .login-page .roomPage .roomCode-modal .roomCode-container #inputCode {
+          margin-top: 10px;
+          width: 75%;
+          height: 50px;
+          background-color: white;
+          border-radius: 100px;
+          border: none; }
+        .login-page .roomPage .roomCode-modal .roomCode-container #inputCode::placeholder {
+          font-size: 17px;
+          padding-left: 20px; }
+        .login-page .roomPage .roomCode-modal .roomCode-container #enterCode {
+          cursor: pointer;
+          margin-top: 25px;
+          border: none;
+          width: 50%;
+          height: 50px;
+          border-radius: 100px;
+          box-shadow: 0px 6px 3px 4px #eb2d2d;
+          background-color: tan;
+          font-size: 20px;
+          font-family: 'Sansita Swashed', cursive;
+          outline: none; }
+
+.character-create-sheet {
+  height: 90%;
+  width: 90%;
+  background-color: tan; }
+  .character-create-sheet .character-row1 .portrait-container {
+    width: 300px;
+    height: 300px;
+    background-color: black; }
+    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-helmet {
+      background-image: url(../images/helmets/helmet1.png);
+      width: 192px;
+      height: 196px;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-face {
+      background-image: url(../images/faces/face2.png);
+      width: 192px;
+      height: 196px;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-armor {
+      background-image: url(../images/armor/armor1.png);
+      width: 192px;
+      height: 196px;
+      background-position: center;
+      background-repeat: no-repeat; }

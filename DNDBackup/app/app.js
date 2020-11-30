@@ -850,6 +850,8 @@ var raceData = [
 
 
 function initFirebase() {
+    
+    document.getElementById("title-audio").play()
 
     firebase
         .auth()
@@ -938,7 +940,7 @@ function initListeners() {
         let email = $("#lEmail").val();
         let password = $("#lPassword").val();
 
-        $(".roomPage").css("display", "flex")
+        
 
         firebase
         .auth()
@@ -990,8 +992,20 @@ function initListeners() {
                 roomCode: $("#newRoomCode").val(),
                 roomName: $("#newRoomName").val()
             })
-            alert($("#newRoomName").val() + " has been created")
+          
+            $(".room-created-modal").css("display", "unset")
+            $(".room-created-message").append($("#newRoomName").val() + " has been created")
     })
+
+
+    $(".room-created-close").click(function() {
+        $(".room-created-modal").css("display", "none")
+        $(".create-room-content").css("display", "none")
+        $(".roomButtons").css("display", "unset")
+
+    })
+
+    
 
     
 }
@@ -1000,7 +1014,7 @@ function initListeners() {
     function getRooms() {
         $("#create-room-content-btn").click(function() {
             $(".roomButtons").css("display", "none")
-            $(".create-room-content").css("display", "flex")
+            $(".create-room-content").css("display", "unset")
             
         })
 
@@ -1051,6 +1065,8 @@ function initListeners() {
                             console.log("Correct Code")
                         
                             $(".character-list-content").css("display", "flex")
+                            $(".find-room-content").css("display", "none")
+                            $(".roomCode-modal").css("display", "none")
                             getPlayers(rId)
                         
                         
