@@ -1,0 +1,936 @@
+.character-create-sheet {
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 2100px;
+    width: 66%;
+    background-color: black;
+    // background-image: url(../images/scroll.png);
+    // background-position: center;
+    
+    // background-size: cover;
+    .character-row1 {
+        display: flex;
+        //background-color: red;
+        .portrait-container {
+            margin-top: 20px;
+            margin-left: 20px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            background-image: url(../images/library.PNG);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .portrait-items {
+                .p-helmet-container {
+                    margin-left: 35px;
+                    margin-top: 110px;
+                    width: 192px;
+                    height: 196px;
+                    position: absolute;
+                    .p-helmet {
+                    
+                        // background-image: url(../images/helmets/helmet1.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                        
+                    }
+                }
+                
+                .p-face-container {
+                    position: absolute;
+                    width: 192px;
+                    height: 196px;
+                    margin-left: 35px;
+                    margin-top: 110px;
+                }
+                .p-face {
+                    
+                    // background-image: url(../images/faces/face6.png);
+                    background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                    
+                }
+                .p-armor-container {
+                    position: absolute;             
+                    width: 192px;
+                    height: 196px;
+                    margin-left: 40px;
+                    margin-top: 150px;
+                    
+                    .p-armor {
+                        // background-image: url(../images/armor/armor1.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                
+            }
+        }
+
+        .health-container {
+            margin-left: 25px;
+            width: 30%;
+            margin-top:20px;
+            background-image: url(../images/scroll.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .playerLevel {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                    
+                }
+                .level-con {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+
+                }
+            }
+            .playerHP {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                }
+                .hp-con {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+                }
+            }
+            .playerArmor {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                }
+                .armor-con {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+                }
+            }
+            .playerGP {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                }
+                .gp-con {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .race-stats-container {
+            margin-left: 25px;
+            width: 36%;
+            margin-top:20px;
+            background-image: url(../images/scroll.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .language-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                }
+                .language {
+                    margin-right: 40px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 25px;
+                }
+            }
+            .speed-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-left: 20px;
+                h4 {
+                    font-size: 25px;
+                }
+                .speed {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+                }
+            }
+        }
+
+        
+    }
+
+    .character-row2 {
+        display: flex;
+        justify-content: space-between;
+
+        #newPlayerName {
+            margin-left: 20px;
+            margin-top: 20px;
+                width: 20%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+                font-size: 20px;
+        }
+        #newPlayerName::placeholder {
+            padding-left: 10px;
+        }
+        .class-container {
+            margin-top: 20px;
+            width: 33%;
+            display: flex;
+            
+            flex-direction: row;
+            align-items: center;
+            .lastClassBtn {
+                background-image: url(../images/lastArrow.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            
+                cursor: pointer;
+                    
+                   
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+            }
+            .lastClassBtn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+            .className-container {
+                margin-left: 10px;
+                margin-right: 10px;
+                background-image: url(../images/scroll.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100px;
+                    width: 200px;
+                .className {
+                    padding-top: 20px;
+                    text-align: center;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+            
+                }
+            }
+            
+            .nextClassBtn {
+                cursor: pointer;
+                background-image: url(../images/nextArrow.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+    
+            }
+            .nextClassBtn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+        }
+
+        .race-container {
+            margin-top: 20px;
+            width: 33%;
+            display: flex;
+            margin-right: 30px;
+            flex-direction: row;
+            align-items: center;
+            .lastRaceBtn {
+                cursor: pointer;
+                background-image: url(../images/lastArrow.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                    
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+            }
+            .lastRaceBtn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+            .raceName-container {
+                margin-left: 10px;
+                margin-right: 10px;
+                background-image: url(../images/scroll.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100px;
+                    width: 200px;
+                .raceName {
+                    padding-top: 20px;
+                    text-align: center;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 35px;
+            
+                }
+            }
+            
+            .nextRaceBtn {
+                cursor: pointer;
+                background-image: url(../images/nextArrow.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+    
+            }
+            .nextRaceBtn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+        }
+    }
+
+    .character-row3 {
+        //background-color: red;
+        display: flex;
+        justify-content: space-between;
+        .character-stats-container {
+            width: 45%;
+            height: 500px;
+            .csc {
+                margin-top: 20px;
+                background-image: url(../images/parchment.jpg);
+                margin-left: 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                .str-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cStr {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+                .dex-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cDex {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+                .con-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cCon {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+                .int-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cInt {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+                .wis-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cWis {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+                .cha-con {
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                    h3 {
+                        background-color: tan;
+                        border-radius: 100px;
+                        font-size: 25px;
+                    }
+                    .cCha {
+                        margin-right: 70px;
+                        font-family: 'Acme', sans-serif;
+                            font-size: 35px;
+                    }
+                }
+            }
+
+            .create-armor-container {
+                border: 4px solid tan;
+                margin-top: 20px;
+                margin-left: 20px;
+                height: 300px;
+                width: 100%;
+                background-image: url(../images/armory.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                .cArmor-con {
+                    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    h4 {
+                        margin-top: 20px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background-color: tan;
+                        border-radius: 20px;
+                        font-size: 25px;
+                        margin-left: 20px;  
+                    }
+                    .armor {
+                        height: 100%;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background-color: tan;
+                        border-radius: 20px;
+                        margin-top: 10px;
+                        margin-right: 70px;  
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                }
+                
+            }
+
+            .create-weapon-container {
+                border: 4px solid tan;
+                margin-top: 20px;
+                margin-left: 20px;
+                height: 300px;
+                width: 100%;
+                background-image: url(../images/swordShield1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                .weapon {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    h4 {
+                        height: 40px;
+                        margin-top: 20px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background-color: tan;
+                        border-radius: 20px;
+                        font-size: 25px;
+                        margin-left: 20px; 
+                    }
+                    .wepInfo-container {
+                        margin-right: 70px;
+                        margin-top: 20px;
+                        background-color: tan;
+                        border-radius: 20px;
+                        .weaponName {
+                          
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        
+                        border-radius: 20px;
+                        margin-top: 10px;
+                        margin-right: 70px;  
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                        }
+                        .weaponAttack {
+                 
+                        padding-left: 10px;
+                        padding-right: 10px;
+                     
+                        border-radius: 20px;
+                        margin-top: 10px;
+                        margin-right: 70px;  
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                        }
+                        .weaponType {
+                      
+                        padding-left: 10px;
+                        padding-right: 10px;
+                     
+                        border-radius: 20px;
+                        margin-top: 10px;
+                        margin-right: 70px;  
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                        }
+                        .weaponDamage {
+                          
+                        padding-left: 10px;
+                        padding-right: 10px;
+                   
+                        border-radius: 20px;
+                        margin-top: 10px;
+                        margin-right: 70px;  
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                        }
+                    }
+                }
+            }
+
+
+
+            
+        }
+
+        .skills-container {
+            margin-top: 20px;
+            background-image: url(../images/parchment.jpg);
+            margin-left: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 1200px;
+            width: 45%;
+            .acr-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cAcr {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .ani-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cAni {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .arc-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cArc {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .ath-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cAth {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .dec-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cDec {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .his-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cHis {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .ins-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cIns {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .inti-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cInti {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .inv-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cInv {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .med-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cMed {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .nat-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cNat {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .per-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cPer {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .perf-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cPerf {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .pers-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cPers {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .rel-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cRel {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .sle-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cSle {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .ste-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cSte {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+            .sur-con {
+                justify-content: space-between;
+                margin-left: 20px;
+                padding-top: 20px;
+                h4 {
+                    background-color: tan;
+                    border-radius: 100px;
+                    font-size: 20px;
+                }
+                .cSur {
+                    margin-right: 70px;
+                    font-family: 'Acme', sans-serif;
+                        font-size: 35px;
+                }
+            }
+        }
+        
+        
+    }
+    
+
+    .character-row4 {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        .traits-container {
+            margin-left: 20px;
+            width: 33%;
+            #create-traits {
+                background-color: tan;
+                width: 100%;
+                height: 250px;
+                font-size: 20px;
+                    font-family: 'Acme', sans-serif;
+                    padding-left: 20px;
+
+            }
+            #create-traits::placeholder {
+                vertical-align: top;
+                  
+                        text-align: left;
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+            }
+        }
+        .bio-container {
+            
+            width: 60%;
+                #create-bio {
+                    background-color: tan;
+                    width: 100%;
+                    height: 250px;
+                    font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                        padding-left: 20px;
+                        
+                        
+                }
+                #create-bio::placeholder {
+                    vertical-align: top;
+                  
+                        text-align: left;
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                }
+        }
+
+    }
+
+    .create-button-row {
+        margin-top: 20px;
+
+        width: 100%;
+        #createPlayerBtn {
+            cursor: pointer;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+                    width: 66%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px tan;
+                    background-color:  rgb(235, 45, 45);
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+        }
+        #createPlayerBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+    }
+    
+}

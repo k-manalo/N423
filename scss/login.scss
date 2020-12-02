@@ -1,0 +1,573 @@
+.login-page {
+    background-image: url(../images/corridor.gif);
+   
+    box-shadow: inset 300px 100px 100px -150px black, 
+                inset -300px 100px 100px -150px black;
+    height: 100%;
+    width: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    //background-color: red;
+    justify-content: center;
+    margin: 0 auto;
+    .signin-content {
+        //background-color: red;
+        width: 63%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .login-page-login-btn {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #login {
+                padding-top: 8px;
+               
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-login-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+
+        .login-page-signup-btn {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #signup {
+                padding-top: 8px;
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-signup-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+
+        .login-page-readme-btn {
+            cursor: pointer;
+            margin-top: 100px;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            background-color: tan;
+            border-radius: 100px;
+            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+            #readme {
+                padding-top: 8px;
+                h3 {
+                   
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .login-page-readme-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+            background-color: rgb(156, 137, 110);
+        }
+    }
+
+    .signupPage {
+        width: 63%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo2 {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .signup-content {
+            width: 53%;
+            margin: 0 auto;
+            text-align: center;
+            h2 {
+                margin-top: -30px;
+                margin-bottom: 25px;
+                color: rgb(236, 220, 80);
+                font-size: 35px;
+            }
+            #sEmail {
+                
+               
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #sEmail::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            #sPassword {
+                margin-top: 50px;
+                
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #sPassword::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .signup-btn-container {
+                #signup-btn {
+                    cursor: pointer;
+                    margin-top: 50px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+                #signup-btn:active {
+
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+            
+        }
+    }
+
+    .loginPage {
+        width: 53%;
+        margin: 0 auto;
+        text-align: center;
+        .login-logo3 {
+            background-image: url(../images/dungeonkeeperlogo.png);
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 30px;
+            
+        }
+        .login-content {
+            width: 53%;
+            margin: 0 auto;
+            text-align: center;
+            h2 {
+                margin-top: -30px;
+                margin-bottom: 25px;
+                color: rgb(236, 220, 80);
+                font-size: 35px;
+            }
+            #lEmail {
+                
+               
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #lEmail::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            #lPassword {
+                margin-top: 50px;
+                
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #lPassword::placeholder {
+              
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .login-btn-container {
+                #login-btn {
+                    cursor: pointer;
+                    margin-top: 50px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+                #login-btn:active {
+
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+            
+        }
+    }
+
+    .roomPage {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .room-logo {
+            margin-top: -250px;
+            background-image: url(../images/dungeonkeeperlogo.png);
+                height: 200px;
+                width: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 30px;
+        }
+        .roomButtons {
+            width: 53%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            #create-room-content-btn {
+                cursor: pointer;
+                margin: 0 auto;
+                width: 60%;
+                height: 70px;
+                background-color: tan;
+                border-radius: 100px;
+                margin-bottom: 50px;
+                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                font-family: 'Sansita Swashed', cursive;
+                font-size: 20px;
+                outline: none;
+            }
+            #create-room-content-btn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+            #find-room-content-btn {
+                cursor: pointer;
+                margin: 0 auto;
+                width: 60%;
+                height: 70px;
+                background-color: tan;
+                border-radius: 100px;
+                margin-bottom: 50px;
+                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                font-family: 'Sansita Swashed', cursive;
+                font-size: 20px;
+                outline: none;
+            }
+            #find-room-content-btn:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                background-color: rgb(156, 137, 110);
+            }
+        }
+    
+    
+    
+        .create-room-content {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #newRoomName {
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+            }
+            #newRoomName::placeholder {
+                padding-left: 20px;
+                font-size: 17px;
+            }
+            #newRoomCode {
+                margin-top: 50px;
+                width: 75%;
+                height: 50px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 100px;
+                border: none;
+    
+            }
+            #newRoomCode::placeholder {
+                padding-left: 20px;
+                font-size: 17px;
+            }
+            #create-room-btn {
+                cursor: pointer;
+                        margin-top: 75px;
+                        border: none;
+                        width: 50%;
+                        height: 50px;
+                        border-radius: 100px;
+                        box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        background-color: tan;
+                        font-size: 20px;
+                        font-family: 'Sansita Swashed', cursive;
+                        outline: none;
+            }
+    
+            
+        }
+    
+        .find-room-content {
+            background-image: url(../images/scroll.png);
+            height: 500px;
+            width: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            .find-content-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                h2 {
+                    margin-top: 20px;
+                }
+                .roomList {
+                    margin: 0 auto;
+                    width: 80%;
+                    height: 100%;
+                    //background-color: red;
+                    .loadRoom {
+                        font-family: sans-serif;
+                        cursor: pointer;
+                        background-color: rgb(156, 137, 110);
+                        width: 100%;
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            
+        }
+    
+    
+        .room-created-modal {
+            position: absolute;
+            height: 200px;
+            width: 350px;
+            //background-color: tan;
+            box-shadow: 0px 0px 50px 20px black;
+            
+            .room-created-scroll {
+                position: absolute;
+                height: 275px;
+                width: 400px;
+                background-image: url(../images/scroll2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .room-created-message {
+                p {
+                    font-size: 25px;
+                }
+            }
+            .room-created-close {
+                cursor: pointer;
+                    margin-top: 75px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+            }
+        }
+
+        .roomCode-modal {
+            height: 200px;
+            width: 50%;
+           
+            .roomCode-container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                justify-content: center;
+                #inputCode {
+                    margin-top: 10px;
+                     width: 75%;
+                     height: 50px;
+                     background-color: rgb(255, 255, 255);
+                     border-radius: 100px;
+                     border: none;
+                 }
+                 #inputCode::placeholder {
+                    font-size: 17px;
+                    padding-left: 20px;
+                 }
+                 #enterCode {
+                     cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 50%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                 }
+            }
+            
+        }
+
+        .character-list-content {
+            .character-list-btn-container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                #loadPlayerBtn {
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 100%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                }
+                #loadPlayerBtn:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+                #newPlayerBtn {
+                    
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 100%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                }
+                #newPlayerBtn:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+        }
+
+        .character-created-modal {
+            position: absolute;
+            height: 200px;
+            width: 350px;
+            //background-color: tan;
+            margin-left: 100px;
+            
+            .character-created-scroll {
+                position: absolute;
+                height: 275px;
+                width: 80%;
+                background-image: url(../images/scroll2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                .character-created-message {
+                    font-family: 'Acme', sans-serif;
+                        font-size: 20px;
+                    
+                }
+                .character-created-modal-close {
+                    padding-top: 10px;
+                    cursor: pointer;
+                    margin-top: 75px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+            }
+        }
+
+
+    }
+
+
+}
