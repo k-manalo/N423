@@ -14,7 +14,7 @@
     margin: 0 auto;
     .signin-content {
         //background-color: red;
-        width: 53%;
+        width: 63%;
         margin: 0 auto;
         text-align: center;
         .login-logo {
@@ -102,7 +102,7 @@
     }
 
     .signupPage {
-        width: 53%;
+        width: 63%;
         margin: 0 auto;
         text-align: center;
         .login-logo2 {
@@ -266,7 +266,7 @@
         .room-logo {
             margin-top: -250px;
             background-image: url(../images/dungeonkeeperlogo.png);
-                height: 300px;
+                height: 200px;
                 width: 50%;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -473,6 +473,97 @@
                  }
             }
             
+        }
+
+        .character-list-content {
+            .character-list-btn-container {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                #loadPlayerBtn {
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 100%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                }
+                #loadPlayerBtn:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+                #newPlayerBtn {
+                    
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 100%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+                }
+                #newPlayerBtn:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+            }
+        }
+
+        .character-created-modal {
+            position: absolute;
+            height: 200px;
+            width: 350px;
+            //background-color: tan;
+            margin-left: 100px;
+            
+            .character-created-scroll {
+                position: absolute;
+                height: 275px;
+                width: 80%;
+                background-image: url(../images/scroll2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                .character-created-message {
+                    font-family: 'Acme', sans-serif;
+                        font-size: 20px;
+                    
+                }
+                .character-created-modal-close {
+                    padding-top: 10px;
+                    cursor: pointer;
+                    margin-top: 75px;
+                    border: none;
+                    width: 50%;
+                    height: 50px;
+                    border-radius: 100px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    background-color: tan;
+                    font-size: 20px;
+                    font-family: 'Sansita Swashed', cursive;
+                    outline: none;
+                }
+            }
         }
 
 

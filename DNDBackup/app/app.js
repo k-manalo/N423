@@ -38,7 +38,7 @@ var classData = [
         "survival": -1,
         "armor": [
             {
-                "item": "Iron Kettle Helm",
+                "item": "Iron Kettle Helm ",
                 "rating": 7
             },
             {
@@ -820,31 +820,169 @@ var raceData = [
         "speed": 30
     },
     {
-        "race": "elf",
+        "race": "Elf",
         "language": "Common, Elvish",
         "speed": 40
     },
     {
-        "race": "dark elf",
+        "race": "Dark Elf",
         "language": "Common, Elvish",
         "speed": 40
     },
     {
-        "race": "dwarf",
+        "race": "Dwarf",
         "language": "Common, Dwarvish",
         "speed": 20
     },
     {
-        "race": "orc",
+        "race": "Orc",
         "language": "Common, Dwarvish",
         "speed": 30
     },
     {
-        "race": "halfling",
+        "race": "Halfling",
         "language": "Common",
         "speed": 20
         
     },
+]
+
+var portraitData = [
+    {
+        helmet: [
+            {
+                "url": "url(../images/helmets/helmet1.png)",
+                
+            },
+            {
+                "url": "url(../images/helmets/helmet2.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet3.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet4.png)",
+                
+            },
+            {
+                "url": "url(../images/helmets/helmet5.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet6.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet7.png)",
+                
+            },
+            {
+                "url": "url(../images/helmets/helmet8.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet9.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet10.png)",
+                
+            },
+            {
+                "url": "url(../images/helmets/helmet11.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet12.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet13.png)",
+                
+            },
+            {
+                "url": "url(../images/helmets/helmet14.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet15.png)",
+            },
+            {
+                "url": "url(../images/helmets/helmet16.png)",
+            }
+        ]
+    },
+    {
+        face: [
+            {
+                "url": "url(../images/faces/face1.png)",
+                
+            },
+            {
+                "url": "url(../images/faces/face2.png)",
+            },
+            {
+                "url": "url(../images/faces/face3.png)",
+            },
+            {
+                "url": "url(../images/faces/face4.png)",
+            },
+            {
+                "url": "url(../images/faces/face5.png)",
+            },
+            {
+                "url": "url(../images/faces/face6.png)",
+            },
+
+        ]
+    },
+    {
+        armor: [
+            {
+                "url": "url(../images/armor/armor1.png)",
+                
+            },
+            {
+                "url": "url(../images/armor/armor2.png)",
+            },
+            {
+                "url": "url(../images/armor/armor3.png)",
+            },
+            {
+                "url": "url(../images/armor/armor4.png)",
+            },
+            {
+                "url": "url(../images/armor/armor5.png)",
+            },
+            {
+                "url": "url(../images/armor/armor6.png)",
+            },
+            {
+                "url": "url(../images/armor/armor7.png)",
+            },
+            {
+                "url": "url(../images/armor/armor8.png)",
+            },
+            {
+                "url": "url(../images/armor/armor9.png)",
+            },
+            {
+                "url": "url(../images/armor/armor10.png)",
+            },
+            {
+                "url": "url(../images/armor/armor11.png)",
+            },
+            {
+                "url": "url(../images/armor/armor12.png)",
+            },
+            {
+                "url": "url(../images/armor/armor13.png)",
+            },
+            {
+                "url": "url(../images/armor/armor14.png)",
+            },
+            {
+                "url": "url(../images/armor/armor15.png)",
+            },
+            {
+                "url": "url(../images/armor/armor16.png)",
+            },
+
+        ]
+    }
 ]
 
 
@@ -879,6 +1017,8 @@ function initFirebase() {
 }
 
 function initListeners() {
+    
+    
     console.log("initListener")
     /*
     $("#getData").click(function() {
@@ -937,6 +1077,7 @@ function initListeners() {
       //-------------------------------------------------------------LOGIN----------------------------------------------------------
     $("#login-btn").click(function() {
 
+        
         let email = $("#lEmail").val();
         let password = $("#lPassword").val();
 
@@ -948,12 +1089,23 @@ function initListeners() {
         .catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
+            loginSuccess = 1;
         
         })
         console.log(email, "has logged in")
-        $(".loginPage").css("display", "none")
-        $(".roomPage").css("display", "flex")
-        getRooms()
+                $(".loginPage").css("display", "none")
+                $(".roomPage").css("display", "flex")
+                getRooms()
+
+        // .then(function(loginSuccess) {
+        //     if(loginSuccess = 0) {
+        //         
+        //     } else {
+        //         alert("Invalid Login")
+        //     }
+        // })
+        
+        
        
     })
     //-------------------------------------------------------------LOGOUT----------------------------------------------------------
@@ -1003,6 +1155,11 @@ function initListeners() {
         $(".create-room-content").css("display", "none")
         $(".roomButtons").css("display", "unset")
 
+    })
+
+
+    $(".character-created-modal-close").click(function() {
+        $(".character-created-modal").css("display", "none")
     })
 
     
@@ -1091,7 +1248,8 @@ function initListeners() {
                 let roomPData = doc.data()
                 console.log(roomPData)
                 $("#newPlayerBtn").click(function() {
-                    $(".character-create-sheet").css("display", "flex")
+                    $(".character-create-sheet").css("display", "unset")
+                    $(".login-page").css("display", "none")
                     createCharacter(rPlayerId)
                 })
 
@@ -1129,10 +1287,19 @@ function initListeners() {
     //----------------------------------CHARACTER CREATION--------------------------------
 
     function createCharacter (newPlayerRoomId) {
+
+        //document.getElementById("create-audio").play()
+
         console.log(newPlayerRoomId)
         var classCount = 0;
+        let raceUrlCount = 0;
+        let urlCount = 0;
        
         let selectedClass = "";
+
+        let phelmet = "";
+        let pface = "";
+        let parmor = "";
 
         var level = 1;
         let gp = "";
@@ -1216,6 +1383,10 @@ function initListeners() {
         selectedClass = classData[0].name
 
 
+        $(".p-armor").css("background-image", portraitData[2].armor[0].url)
+        $(".p-face").css("background-image", portraitData[1].face[0].url)
+        $(".p-helmet").css("background-image", portraitData[0].helmet[0].url)
+
         $(".level-con").append(level)
         $(".hp-con").append(classData[0].hp)
         $(".armor-con").append(armor)
@@ -1257,6 +1428,11 @@ function initListeners() {
         armor = armor;
         armorA = armorA;
         armorB = armorB;
+
+        phelmet = portraitData[0].helmet[0].url;
+        pface = portraitData[1].face[0].url;
+        parmor = portraitData[2].armor[0].url;
+
         wName = classData[0].weapon[0].weapon;
         wAttack = classData[0].weapon[0].attack;
         wType = classData[0].weapon[0].type;
@@ -1307,7 +1483,10 @@ function initListeners() {
         $(".lastClassBtn").click(function() {
             console.log("last clicked")
             classCount = classCount - 1;
+            urlCount = urlCount - 1;
             if(classCount < 0) {
+
+                
 
                //armor
 
@@ -1334,6 +1513,8 @@ function initListeners() {
 
                     }
                 }
+
+
 
                 $(".className").html(classData[15].name)
                 classCount = 15;
@@ -1377,6 +1558,8 @@ function initListeners() {
                 $(".armor").append(armorB)
 
 
+
+                
                 
                 
 
@@ -1517,11 +1700,33 @@ function initListeners() {
                 survival = classData[classCount].survival;
             }
             console.log(selectedClass)
+
+
+            if(urlCount < 0) {
+                    
+                $(".p-armor").css("background-image", portraitData[2].armor[15].url)
+                $(".p-helmet").css("background-image", portraitData[0].helmet[15].url)
+                
+                urlCount = 15
+
+                parmor = portraitData[2].armor[15].url
+                phelmet = portraitData[0].helmet[15].url
+                
+            } else {
+                $(".p-armor").css("background-image", portraitData[2].armor[urlCount].url)
+                $(".p-helmet").css("background-image", portraitData[0].helmet[urlCount].url)
+
+                parmor = portraitData[2].armor
+                phelmet = portraitData[0].helmet[urlCount].url
+            }
+
         })
 
         //-----------------next class click--------------------
         $(".nextClassBtn").click(function() {
             classCount = classCount + 1;
+            urlCount = urlCount + 1;
+
             if(classCount > 15) {
 
                 //armor
@@ -1721,6 +1926,24 @@ function initListeners() {
                 survival = classData[classCount].survival;
             }
             console.log(selectedClass)
+
+            if(urlCount > 15) {
+                    
+                $(".p-armor").css("background-image", portraitData[2].armor[0].url)
+                $(".p-helmet").css("background-image", portraitData[0].helmet[0].url)
+                
+                urlCount = 0
+
+                parmor = portraitData[2].armor[0].url;
+                phelmet = portraitData[0].helmet[0].url;
+            } else {
+                $(".p-armor").css("background-image", portraitData[2].armor[urlCount].url)
+                $(".p-helmet").css("background-image", portraitData[0].helmet[urlCount].url)
+
+                parmor = portraitData[2].armor[urlCount].url
+                phelmet = portraitData[0].helmet[urlCount].url
+            }
+
         })
 
         //-------------------------------switch race---------------------
@@ -1733,8 +1956,11 @@ function initListeners() {
                 $(".raceName").html(raceData[5].race)
                 $(".language").html(raceData[5].language)
                 $(".speed").html(raceData[5].speed)
+                $(".p-face").css("background-image", portraitData[1].face[5].url)
 
                 raceCount = 5;
+
+                pface = portraitData[1].face[5].url
 
                 selectedRace = raceData[5].race;
                 language = raceData[5].language;
@@ -1745,6 +1971,9 @@ function initListeners() {
                 $(".raceName").html(raceData[raceCount].race)
                 $(".language").html(raceData[raceCount].language)
                 $(".speed").html(raceData[raceCount].speed)
+                $(".p-face").css("background-image", portraitData[1].face[raceCount].url)
+
+                pface = portraitData[1].face[raceCount].url;
                 selectedRace = raceData[raceCount].race
                 language = raceData[raceCount].language;
                 speed = raceData[raceCount].speed;
@@ -1760,6 +1989,11 @@ function initListeners() {
                 $(".raceName").html(raceData[0].race)
                 $(".language").html(raceData[0].language)
                 $(".speed").html(raceData[0].speed)
+
+                $(".p-face").css("background-image", portraitData[1].face[0].url)
+
+
+                pface = portraitData[1].face[0].url
                 raceCount = 0;
                 selectedRace = raceData[0].race
                 language = raceData[0].language;
@@ -1768,6 +2002,11 @@ function initListeners() {
                 $(".raceName").html(raceData[raceCount].race)
                 $(".language").html(raceData[raceCount].language)
                 $(".speed").html(raceData[raceCount].speed)
+
+                $(".p-face").css("background-image", portraitData[1].face[raceCount].url)
+
+                pface = portraitData[1].face[raceCount].url
+
                 selectedRace = raceData[raceCount].race
                 language = raceData[raceCount].language;
                 speed = raceData[raceCount].speed;
@@ -1791,6 +2030,9 @@ function initListeners() {
                 pbonus: pbonus,
                 gp: gp,
                 hp: hp,
+                parmor: parmor,
+                phelmet: phelmet,
+                pface: pface,
                 armor: armor,
                 armorI: [
                     {
@@ -1840,8 +2082,13 @@ function initListeners() {
                 traits: $("#create-traits").val(),
                 biography: $("#create-bio").val(),
               
-            })  
-                    
+            })
+
+            $(".character-create-sheet").css("display", "none")
+            $(".login-page").css("display", "flex")
+            $(".roomPage").css("display", "flex")
+            $(".character-created-modal").css("display", "flex")
+            $(".character-created-message").html("Character Created!")        
         })
             
     }

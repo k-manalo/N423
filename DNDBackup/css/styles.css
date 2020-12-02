@@ -29,7 +29,7 @@ p {
   justify-content: center;
   margin: 0 auto; }
   .login-page .signin-content {
-    width: 53%;
+    width: 63%;
     margin: 0 auto;
     text-align: center; }
     .login-page .signin-content .login-logo {
@@ -92,7 +92,7 @@ p {
       box-shadow: 0px 0px 3px 4px #ecdc50;
       background-color: #9c896e; }
   .login-page .signupPage {
-    width: 53%;
+    width: 63%;
     margin: 0 auto;
     text-align: center; }
     .login-page .signupPage .login-logo2 {
@@ -214,7 +214,7 @@ p {
     .login-page .roomPage .room-logo {
       margin-top: -250px;
       background-image: url(../images/dungeonkeeperlogo.png);
-      height: 300px;
+      height: 200px;
       width: 50%;
       background-position: center;
       background-repeat: no-repeat;
@@ -377,30 +377,800 @@ p {
           font-size: 20px;
           font-family: 'Sansita Swashed', cursive;
           outline: none; }
+    .login-page .roomPage .character-list-content .character-list-btn-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto; }
+      .login-page .roomPage .character-list-content .character-list-btn-container #loadPlayerBtn {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+        margin-top: 25px;
+        border: none;
+        width: 100%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .login-page .roomPage .character-list-content .character-list-btn-container #loadPlayerBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+      .login-page .roomPage .character-list-content .character-list-btn-container #newPlayerBtn {
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+        margin-top: 25px;
+        border: none;
+        width: 100%;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .login-page .roomPage .character-list-content .character-list-btn-container #newPlayerBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+    .login-page .roomPage .character-created-modal {
+      position: absolute;
+      height: 200px;
+      width: 350px;
+      margin-left: 100px; }
+      .login-page .roomPage .character-created-modal .character-created-scroll {
+        position: absolute;
+        height: 275px;
+        width: 80%;
+        background-image: url(../images/scroll2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; }
+        .login-page .roomPage .character-created-modal .character-created-scroll .character-created-message {
+          font-family: 'Acme', sans-serif;
+          font-size: 20px; }
+        .login-page .roomPage .character-created-modal .character-created-scroll .character-created-modal-close {
+          padding-top: 10px;
+          cursor: pointer;
+          margin-top: 75px;
+          border: none;
+          width: 50%;
+          height: 50px;
+          border-radius: 100px;
+          box-shadow: 0px 6px 3px 4px #eb2d2d;
+          background-color: tan;
+          font-size: 20px;
+          font-family: 'Sansita Swashed', cursive;
+          outline: none; }
 
 .character-create-sheet {
-  height: 90%;
-  width: 90%;
-  background-color: tan; }
-  .character-create-sheet .character-row1 .portrait-container {
-    width: 300px;
-    height: 300px;
-    background-color: black; }
-    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-helmet {
-      background-image: url(../images/helmets/helmet1.png);
-      width: 192px;
-      height: 196px;
+  margin: 0 auto;
+  margin-top: 25px;
+  height: 2100px;
+  width: 66%;
+  background-color: black; }
+  .character-create-sheet .character-row1 {
+    display: flex; }
+    .character-create-sheet .character-row1 .portrait-container {
+      margin-top: 20px;
+      margin-left: 20px;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: black;
+      background-image: url(../images/library.PNG);
       background-position: center;
-      background-repeat: no-repeat; }
-    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-face {
-      background-image: url(../images/faces/face2.png);
-      width: 192px;
-      height: 196px;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .character-create-sheet .character-row1 .portrait-container .portrait-items .p-helmet-container {
+        margin-left: 35px;
+        margin-top: 110px;
+        width: 192px;
+        height: 196px;
+        position: absolute; }
+        .character-create-sheet .character-row1 .portrait-container .portrait-items .p-helmet-container .p-helmet {
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100%; }
+      .character-create-sheet .character-row1 .portrait-container .portrait-items .p-face-container {
+        position: absolute;
+        width: 192px;
+        height: 196px;
+        margin-left: 35px;
+        margin-top: 110px; }
+      .character-create-sheet .character-row1 .portrait-container .portrait-items .p-face {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%; }
+      .character-create-sheet .character-row1 .portrait-container .portrait-items .p-armor-container {
+        position: absolute;
+        width: 192px;
+        height: 196px;
+        margin-left: 40px;
+        margin-top: 150px; }
+        .character-create-sheet .character-row1 .portrait-container .portrait-items .p-armor-container .p-armor {
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100%; }
+    .character-create-sheet .character-row1 .health-container {
+      margin-left: 25px;
+      width: 30%;
+      margin-top: 20px;
+      background-image: url(../images/scroll.png);
       background-position: center;
-      background-repeat: no-repeat; }
-    .character-create-sheet .character-row1 .portrait-container .portrait-items .p-armor {
-      background-image: url(../images/armor/armor1.png);
-      width: 192px;
-      height: 196px;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .character-create-sheet .character-row1 .health-container .playerLevel {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .health-container .playerLevel h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .health-container .playerLevel .level-con {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row1 .health-container .playerHP {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .health-container .playerHP h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .health-container .playerHP .hp-con {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row1 .health-container .playerArmor {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .health-container .playerArmor h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .health-container .playerArmor .armor-con {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row1 .health-container .playerGP {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .health-container .playerGP h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .health-container .playerGP .gp-con {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+    .character-create-sheet .character-row1 .race-stats-container {
+      margin-left: 25px;
+      width: 36%;
+      margin-top: 20px;
+      background-image: url(../images/scroll.png);
       background-position: center;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .character-create-sheet .character-row1 .race-stats-container .language-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .race-stats-container .language-container h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .race-stats-container .language-container .language {
+          margin-right: 40px;
+          font-family: 'Acme', sans-serif;
+          font-size: 25px; }
+      .character-create-sheet .character-row1 .race-stats-container .speed-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 20px; }
+        .character-create-sheet .character-row1 .race-stats-container .speed-container h4 {
+          font-size: 25px; }
+        .character-create-sheet .character-row1 .race-stats-container .speed-container .speed {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+  .character-create-sheet .character-row2 {
+    display: flex;
+    justify-content: space-between; }
+    .character-create-sheet .character-row2 #newPlayerName {
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 20%;
+      height: 50px;
+      background-color: white;
+      border-radius: 100px;
+      border: none;
+      font-size: 20px; }
+    .character-create-sheet .character-row2 #newPlayerName::placeholder {
+      padding-left: 10px; }
+    .character-create-sheet .character-row2 .class-container {
+      margin-top: 20px;
+      width: 33%;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .character-create-sheet .character-row2 .class-container .lastClassBtn {
+        background-image: url(../images/lastArrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .character-create-sheet .character-row2 .class-container .lastClassBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+      .character-create-sheet .character-row2 .class-container .className-container {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-image: url(../images/scroll.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        width: 200px; }
+        .character-create-sheet .character-row2 .class-container .className-container .className {
+          padding-top: 20px;
+          text-align: center;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row2 .class-container .nextClassBtn {
+        cursor: pointer;
+        background-image: url(../images/nextArrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .character-create-sheet .character-row2 .class-container .nextClassBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+    .character-create-sheet .character-row2 .race-container {
+      margin-top: 20px;
+      width: 33%;
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      align-items: center; }
+      .character-create-sheet .character-row2 .race-container .lastRaceBtn {
+        cursor: pointer;
+        background-image: url(../images/lastArrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .character-create-sheet .character-row2 .race-container .lastRaceBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+      .character-create-sheet .character-row2 .race-container .raceName-container {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-image: url(../images/scroll.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        width: 200px; }
+        .character-create-sheet .character-row2 .race-container .raceName-container .raceName {
+          padding-top: 20px;
+          text-align: center;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row2 .race-container .nextRaceBtn {
+        cursor: pointer;
+        background-image: url(../images/nextArrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        box-shadow: 0px 6px 3px 4px #eb2d2d;
+        background-color: tan;
+        font-size: 20px;
+        font-family: 'Sansita Swashed', cursive;
+        outline: none; }
+      .character-create-sheet .character-row2 .race-container .nextRaceBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+  .character-create-sheet .character-row3 {
+    display: flex;
+    justify-content: space-between; }
+    .character-create-sheet .character-row3 .character-stats-container {
+      width: 45%;
+      height: 500px; }
+      .character-create-sheet .character-row3 .character-stats-container .csc {
+        margin-top: 20px;
+        background-image: url(../images/parchment.jpg);
+        margin-left: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .str-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .str-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .str-con .cStr {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .dex-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .dex-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .dex-con .cDex {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .con-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .con-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .con-con .cCon {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .int-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .int-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .int-con .cInt {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .wis-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .wis-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .wis-con .cWis {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+        .character-create-sheet .character-row3 .character-stats-container .csc .cha-con {
+          justify-content: space-between;
+          margin-left: 20px;
+          padding-top: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .cha-con h3 {
+            background-color: tan;
+            border-radius: 100px;
+            font-size: 25px; }
+          .character-create-sheet .character-row3 .character-stats-container .csc .cha-con .cCha {
+            margin-right: 70px;
+            font-family: 'Acme', sans-serif;
+            font-size: 35px; }
+      .character-create-sheet .character-row3 .character-stats-container .create-armor-container {
+        border: 4px solid tan;
+        margin-top: 20px;
+        margin-left: 20px;
+        height: 300px;
+        width: 100%;
+        background-image: url(../images/armory.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+        .character-create-sheet .character-row3 .character-stats-container .create-armor-container .cArmor-con {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          .character-create-sheet .character-row3 .character-stats-container .create-armor-container .cArmor-con h4 {
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: tan;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .create-armor-container .cArmor-con .armor {
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: tan;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-right: 70px;
+            font-size: 20px;
+            font-family: 'Acme', sans-serif; }
+      .character-create-sheet .character-row3 .character-stats-container .create-weapon-container {
+        border: 4px solid tan;
+        margin-top: 20px;
+        margin-left: 20px;
+        height: 300px;
+        width: 100%;
+        background-image: url(../images/swordShield1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+        .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon h4 {
+            height: 40px;
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: tan;
+            border-radius: 20px;
+            font-size: 25px;
+            margin-left: 20px; }
+          .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon .wepInfo-container {
+            margin-right: 70px;
+            margin-top: 20px;
+            background-color: tan;
+            border-radius: 20px; }
+            .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon .wepInfo-container .weaponName {
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 20px;
+              margin-top: 10px;
+              margin-right: 70px;
+              font-size: 20px;
+              font-family: 'Acme', sans-serif; }
+            .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon .wepInfo-container .weaponAttack {
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 20px;
+              margin-top: 10px;
+              margin-right: 70px;
+              font-size: 20px;
+              font-family: 'Acme', sans-serif; }
+            .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon .wepInfo-container .weaponType {
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 20px;
+              margin-top: 10px;
+              margin-right: 70px;
+              font-size: 20px;
+              font-family: 'Acme', sans-serif; }
+            .character-create-sheet .character-row3 .character-stats-container .create-weapon-container .weapon .wepInfo-container .weaponDamage {
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 20px;
+              margin-top: 10px;
+              margin-right: 70px;
+              font-size: 20px;
+              font-family: 'Acme', sans-serif; }
+    .character-create-sheet .character-row3 .skills-container {
+      margin-top: 20px;
+      background-image: url(../images/parchment.jpg);
+      margin-left: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 1200px;
+      width: 45%; }
+      .character-create-sheet .character-row3 .skills-container .acr-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .acr-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .acr-con .cAcr {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .ani-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ani-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ani-con .cAni {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .arc-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .arc-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .arc-con .cArc {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .ath-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ath-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ath-con .cAth {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .dec-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .dec-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .dec-con .cDec {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .his-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .his-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .his-con .cHis {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .ins-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ins-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ins-con .cIns {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .inti-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .inti-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .inti-con .cInti {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .inv-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .inv-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .inv-con .cInv {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .med-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .med-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .med-con .cMed {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .nat-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .nat-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .nat-con .cNat {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .per-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .per-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .per-con .cPer {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .perf-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .perf-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .perf-con .cPerf {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .pers-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .pers-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .pers-con .cPers {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .rel-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .rel-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .rel-con .cRel {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .sle-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .sle-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .sle-con .cSle {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .ste-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ste-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .ste-con .cSte {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+      .character-create-sheet .character-row3 .skills-container .sur-con {
+        justify-content: space-between;
+        margin-left: 20px;
+        padding-top: 20px; }
+        .character-create-sheet .character-row3 .skills-container .sur-con h4 {
+          background-color: tan;
+          border-radius: 100px;
+          font-size: 20px; }
+        .character-create-sheet .character-row3 .skills-container .sur-con .cSur {
+          margin-right: 70px;
+          font-family: 'Acme', sans-serif;
+          font-size: 35px; }
+  .character-create-sheet .character-row4 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; }
+    .character-create-sheet .character-row4 .traits-container {
+      margin-left: 20px;
+      width: 33%; }
+      .character-create-sheet .character-row4 .traits-container #create-traits {
+        background-color: tan;
+        width: 100%;
+        height: 250px;
+        font-size: 20px;
+        font-family: 'Acme', sans-serif;
+        padding-left: 20px; }
+      .character-create-sheet .character-row4 .traits-container #create-traits::placeholder {
+        vertical-align: top;
+        text-align: left;
+        font-size: 20px;
+        font-family: 'Acme', sans-serif; }
+    .character-create-sheet .character-row4 .bio-container {
+      width: 60%; }
+      .character-create-sheet .character-row4 .bio-container #create-bio {
+        background-color: tan;
+        width: 100%;
+        height: 250px;
+        font-size: 20px;
+        font-family: 'Acme', sans-serif;
+        padding-left: 20px; }
+      .character-create-sheet .character-row4 .bio-container #create-bio::placeholder {
+        vertical-align: top;
+        text-align: left;
+        font-size: 20px;
+        font-family: 'Acme', sans-serif; }
+  .character-create-sheet .create-button-row {
+    margin-top: 20px;
+    width: 100%; }
+    .character-create-sheet .create-button-row #createPlayerBtn {
+      cursor: pointer;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      width: 66%;
+      height: 50px;
+      border-radius: 100px;
+      box-shadow: 0px 6px 3px 4px tan;
+      background-color: #eb2d2d;
+      font-size: 20px;
+      font-family: 'Sansita Swashed', cursive;
+      outline: none; }
+    .character-create-sheet .create-button-row #createPlayerBtn:active {
+      transform: translateY(4px);
+      box-shadow: 0px 0px 3px 4px #ecdc50;
+      background-color: #9c896e; }
