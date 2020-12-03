@@ -1690,6 +1690,313 @@ p {
           .playerPage .playerSheet .pp-stats-container .pp-skills .pp-skills-con .pp-sur {
             font-size: 20px;
             font-family: 'Acme', sans-serif; }
+    .playerPage .playerSheet .pp-inventory-container {
+      display: flex;
+      flex-direction: column; }
+      .playerPage .playerSheet .pp-inventory-container .pp-weapons-container {
+        height: 100%;
+        width: 70%;
+        margin: 0 auto; }
+        .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-title {
+          margin-top: 50px;
+          text-align: center; }
+        .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container {
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%; }
+          .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list {
+            background-image: url(../images/swordShield1.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list .pp-weps {
+              display: flex;
+              margin: 0 auto;
+              flex-direction: column;
+              text-align: center;
+              font-family: 'Acme', sans-serif;
+              font-size: 27px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action {
+            background-image: url(../images/parchment.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 6px 15px 4px #030303; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .pp-weps-action-con h1 {
+              margin-top: 20px; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .pp-weps-action-con button {
+              cursor: pointer;
+              outline: none;
+              margin: 0 auto;
+              height: 50px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              border: none;
+              background-color: tan;
+              width: 50%;
+              border-radius: 200px;
+              font-size: 27px;
+              font-family: 'Acme', sans-serif;
+              box-shadow: 0px 6px 3px 4px #eb2d2d; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .pp-weps-action-con #sellWep:active {
+              transform: translateY(4px);
+              box-shadow: 0px 0px 3px 4px #ecdc50;
+              background-color: #9c896e; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .pp-weps-action-con #dropWep:active {
+              transform: translateY(4px);
+              box-shadow: 0px 0px 3px 4px #ecdc50;
+              background-color: #9c896e; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .pp-weps-action-con #cancelWep:active {
+              transform: translateY(4px);
+              box-shadow: 0px 0px 3px 4px #ecdc50;
+              background-color: #9c896e; }
+            .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor {
+              display: flex;
+              flex-direction: column; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor h1 {
+                margin-top: 20px; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor #sellWepAmt {
+                margin: 0 auto;
+                width: 50%;
+                height: 50px;
+                border-radius: 200px; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor button {
+                cursor: pointer;
+                outline: none;
+                margin: 0 auto;
+                height: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border: none;
+                background-color: tan;
+                width: 50%;
+                border-radius: 200px;
+                font-size: 27px;
+                font-family: 'Acme', sans-serif;
+                box-shadow: 0px 6px 3px 4px #eb2d2d; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor #confirmSellWep:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px #ecdc50;
+                background-color: #9c896e; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action .sellWepFor #confirmCancelWep:active {
+                transform: translateY(4px);
+                box-shadow: 0px 0px 3px 4px #ecdc50;
+                background-color: #9c896e; }
+      .playerPage .playerSheet .pp-inventory-container .pp-armor-container {
+        height: 100%;
+        width: 70%;
+        margin: 0 auto; }
+        .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-title {
+          margin-top: 20px;
+          text-align: center; }
+        .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con {
+          background-image: url(../images/armory.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con .pp-armor-list {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+            .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con .pp-armor-list .pp-armor-names {
+              padding-left: 20%;
+              padding-right: 20%;
+              background-color: rgba(156, 137, 110, 0.65);
+              font-family: 'Acme', sans-serif;
+              font-size: 27px; }
+            .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con .pp-armor-list .pp-armor-ratings {
+              padding-left: 20%;
+              padding-right: 20%;
+              background-color: rgba(156, 137, 110, 0.65);
+              font-family: 'Acme', sans-serif;
+              font-size: 27px; }
+        .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action {
+          background-image: url(../images/parchment.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action h1 {
+            margin-top: 20px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action button {
+            cursor: pointer;
+            outline: none;
+            margin: 0 auto;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: tan;
+            width: 50%;
+            border-radius: 200px;
+            font-size: 27px;
+            font-family: 'Acme', sans-serif;
+            box-shadow: 0px 6px 3px 4px #eb2d2d; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action #sellArmorBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action #dropArmorBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-action #cancelArmorBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+        .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor {
+          background-image: url(../images/parchment.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor h2 {
+            margin-top: 20px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor #sellArmorAmt {
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            border-radius: 200px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor button {
+            cursor: pointer;
+            outline: none;
+            margin: 0 auto;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: tan;
+            width: 50%;
+            border-radius: 200px;
+            font-size: 27px;
+            font-family: 'Acme', sans-serif;
+            box-shadow: 0px 6px 3px 4px #eb2d2d; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor #confirm-sellArmor:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-sellArmorFor #cancel-sellArmor:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+      .playerPage .playerSheet .pp-inventory-container .pp-items-container {
+        height: 100%;
+        width: 70%;
+        margin: 0 auto; }
+        .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-title {
+          margin-top: 20px;
+          text-align: center; }
+        .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-list {
+          background-image: url(../images/scroll2.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-list .pp-items {
+            margin-top: 20px;
+            font-size: 27px;
+            font-family: 'Acme', sans-serif; }
+        .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action {
+          background-image: url(../images/parchment.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action button {
+            cursor: pointer;
+            outline: none;
+            margin: 0 auto;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: tan;
+            width: 50%;
+            border-radius: 200px;
+            font-size: 27px;
+            font-family: 'Acme', sans-serif;
+            box-shadow: 0px 6px 3px 4px #eb2d2d; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action #sellItemBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action #dropItemBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action #cancelItemBtn:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+        .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor {
+          background-image: url(../images/parchment.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 400px;
+          box-shadow: 0px 6px 15px 4px #030303;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor h2 {
+            margin-top: 20px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor #sellItemAmt {
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            border-radius: 200px; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor button {
+            cursor: pointer;
+            outline: none;
+            margin: 0 auto;
+            height: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: tan;
+            width: 50%;
+            border-radius: 200px;
+            font-size: 27px;
+            font-family: 'Acme', sans-serif;
+            box-shadow: 0px 6px 3px 4px #eb2d2d; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor #confirm-sellItem:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
+          .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-sellItemFor #cancel-sellItem:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px 4px #ecdc50;
+            background-color: #9c896e; }
     .playerPage .playerSheet .levelling-guide {
       padding-top: 100px;
       display: flex;

@@ -586,6 +586,418 @@
             }
         }
 
+        .pp-inventory-container {
+           
+            display: flex;
+            flex-direction: column;
+            .pp-weapons-container {
+                
+                height: 100%;
+                width: 70%;
+                margin: 0 auto;
+                .pp-weps-title {
+                    margin-top: 50px;
+                    text-align: center;
+                    h2 {
+
+                    }
+                }
+                .pp-weps-container {
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    
+                    .pp-weps-list {
+                       
+                        background-image: url(../images/swordShield1.png);
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 400px;
+                        
+                        .pp-weps {
+                            display: flex;
+                            margin: 0 auto;
+                            flex-direction: column;
+                            text-align: center;
+                            // background-color: rgba(156, 137, 110, .5);
+                            font-family: 'Acme', sans-serif;
+                            font-size: 27px;
+                        }
+                        
+                    }
+                    .pp-weps-action {
+                        background-image: url(../images/parchment.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        text-align: center;
+                        height: 400px;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                        .pp-weps-action-con {
+                            h1 {
+                                margin-top: 20px;
+                            }
+                            button {
+                                cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                            }
+                            #sellWep:active {
+                                transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                            }
+                            #dropWep:active {
+                                transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                            }
+                            #cancelWep:active {
+                                transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                            }
+                        }
+
+                        .sellWepFor {
+                            display: flex;
+                            flex-direction: column;
+                            h1 {
+                                margin-top: 20px;
+                            }
+                            #sellWepAmt {
+                                margin: 0 auto;
+                                width: 50%;
+                                height: 50px;
+                                border-radius: 200px;
+                            }
+                            button {
+                                cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                            }
+                            #confirmSellWep:active {
+                                transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                            }
+                            #confirmCancelWep:active {
+                                transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+
+
+            .pp-armor-container {
+                height: 100%;
+                width: 70%;
+                margin: 0 auto;
+
+                .pp-armor-title {
+                    margin-top: 20px;
+                    text-align: center;
+                    h2 {
+
+                    }
+                }
+                .pp-armor-con {
+                    background-image: url(../images/armory.png);
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 400px;
+                        box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    .pp-armor-list {
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .pp-armor-names {
+                            // margin-left: 100px;
+                            padding-left: 20%;
+                            padding-right: 20%;
+                            background-color: rgba(156, 137, 110, .65);
+                            font-family: 'Acme', sans-serif;
+                            font-size: 27px;
+                        }
+                        .pp-armor-ratings {
+                            // margin-right: 100px;
+                            padding-left: 20%;
+                            padding-right: 20%;
+                            background-color: rgba(156, 137, 110, .65);
+                            font-family: 'Acme', sans-serif;
+                            font-size: 27px;
+                        }
+                    }
+
+
+                    
+                }
+
+
+                .pp-armor-action {
+                    background-image: url(../images/parchment.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    h1 {
+                        margin-top: 20px;
+                    }
+                    button {
+                        cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    }
+                    #sellArmorBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    #dropArmorBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    #cancelArmorBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                }
+
+
+                .pp-sellArmorFor {
+                    background-image: url(../images/parchment.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    h2 {
+                        margin-top: 20px;
+                    }
+                    #sellArmorAmt {
+                        margin: 0 auto;
+                                width: 50%;
+                                height: 50px;
+                                border-radius: 200px;
+                    }
+                    button {
+                        cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    }
+                    #confirm-sellArmor:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    #cancel-sellArmor:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                }
+
+
+
+            }
+
+
+
+            .pp-items-container {
+                height: 100%;
+                width: 70%;
+                margin: 0 auto;
+
+                .pp-items-title {
+                    margin-top: 20px;
+                    text-align: center;
+                    h2 {
+
+                    }
+                }
+
+                .pp-items-list {
+                    background-image: url(../images/scroll2.png);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    .pp-items {
+                        margin-top: 20px;
+                        font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                    }
+                }
+
+                .pp-items-action {
+                    background-image: url(../images/parchment.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                    h1 {
+
+                    }
+                    button {
+                        cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    }
+                    #sellItemBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    #dropItemBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+
+                    }
+                    #cancelItemBtn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+
+                    }
+
+                }
+
+                .pp-sellItemFor {
+                    background-image: url(../images/parchment.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    h2 {
+                        margin-top: 20px;
+                    }
+                    #sellItemAmt {
+                        margin: 0 auto;
+                                width: 50%;
+                                height: 50px;
+                                border-radius: 200px;
+                    }
+                    button {
+                        cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    }
+                    #confirm-sellItem:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    #cancel-sellItem:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+
+                }
+                
+            }
+        }
+        
+
         .levelling-guide {
             padding-top: 100px;
             display: flex;
