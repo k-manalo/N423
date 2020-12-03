@@ -264,7 +264,7 @@
         align-items: center;
         text-align: center;
         .room-logo {
-            margin-top: -250px;
+            //margin-top: -250px;
             background-image: url(../images/dungeonkeeperlogo.png);
                 height: 200px;
                 width: 50%;
@@ -368,17 +368,22 @@
         }
     
         .find-room-content {
-            background-image: url(../images/scroll.png);
-            height: 500px;
+            
+            display: flex;
+            flex-direction: column;
+            
             width: 50%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             
             .find-content-container {
+                background-image: url(../images/scroll.png);
+            
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 display: flex;
                 flex-direction: column;
                 width: 100%;
+                height: 100%;
                 h2 {
                     margin-top: 20px;
                 }
@@ -406,10 +411,12 @@
             height: 200px;
             width: 350px;
             //background-color: tan;
-            box-shadow: 0px 0px 50px 20px black;
+            
             
             .room-created-scroll {
                 position: absolute;
+                display: flex;
+                flex-direction: column;
                 height: 275px;
                 width: 400px;
                 background-image: url(../images/scroll2.png);
@@ -418,11 +425,12 @@
                 background-size: cover;
             }
             .room-created-message {
-                p {
-                    font-size: 25px;
-                }
+                padding-top: 25px;
+                font-size: 20px;
+                font-family: 'Sansita Swashed', cursive;
             }
             .room-created-close {
+                margin: 0 auto;
                 cursor: pointer;
                     margin-top: 75px;
                     border: none;
@@ -460,6 +468,7 @@
                  }
                  #enterCode {
                      cursor: pointer;
+                     margin-left: 15px;
                          margin-top: 25px;
                          border: none;
                          width: 50%;
@@ -566,8 +575,70 @@
             }
         }
 
+        .show-players-container {
+            display: flex;
+            flex-direction: column;
+            
+            width: 50%;
+            
+            .players-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/scroll.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                h2 {
+                    margin-top: 20px;
+                }
+                .playerList {
+                    margin: 0 auto;
+                    width: 80%;
+                    height: 100%;
+                    margin-bottom: 15px;
+                    .p-container {
+                        font-family: sans-serif;
+                        cursor: pointer;
+                        background-color: rgb(156, 137, 110);
+                        width: 100%;
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                    .p-container:active {
+                        background-color: rgb(236, 220, 80);
+                    }
+                }
+            }
+            .enterPlayerBtn {
+                margin-bottom: 25px;
+                padding-top: 10px;
+                margin: 0 auto;
+                cursor: pointer;
+                         margin-top: 25px;
+                         border: none;
+                         width: 50%;
+                         height: 50px;
+                         border-radius: 100px;
+                         box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                         background-color: tan;
+                         font-size: 20px;
+                         font-family: 'Sansita Swashed', cursive;
+                         outline: none;
+
+            }
+        }
+
 
     }
 
 
+}
+
+@media (max-width: 840px) {
+    .login-page {
+        width: 100%;
+    }
+    
 }

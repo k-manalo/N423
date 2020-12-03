@@ -1256,6 +1256,7 @@ function initListeners() {
                 $("#loadPlayerBtn").click(function() {
                     console.log("loadClicked")
                     $(".show-players-container").css("display", "flex")
+                    $(".character-list-content").css("display", "none")
 
 
                     var roomPlayers = _db
@@ -1270,13 +1271,19 @@ function initListeners() {
                             console.log(pData)
 
                             console.log(roomPlayers)
-                            $(".players-container").append(`<div id="${id}" class="p-container">${pData.playerName}</div>`)
+                            $(".playerList").append(`<div id="${id}" class="p-container">${pData.playerName}</div>`)
                             console.log(pData.playerName)
                         })
                         $(".p-container").click(function(e) {
+                            
                             var pID = e.currentTarget.id
                             console.log(pID)
-                            loadCharacterSheetData(pID)
+
+                            $(".enterPlayerBtn").css("display", "unset")
+                            $(".enterPlayerBtn").click(function() {
+                                loadCharacterSheetData(pID)
+                            })
+                            
                         })
                         
                     })
@@ -2096,7 +2103,7 @@ function initListeners() {
     //----------------------------------LOAD CHARACTER SHEET-------------------------------
 
     function loadCharacterSheetData(charID) {
-        $(".playerSheet-container").css("display", "flex")
+        $(".playerPage").css("display", "flex")
         _db
         .collection("DDUsers").doc("players").collection("player").doc(charID)
         .get()

@@ -1,0 +1,626 @@
+.playerPage {
+    background-color: black;
+    height: 2100px;
+    width: 66%;
+    margin: 0 auto;
+
+    .playerBanner {
+        box-shadow: inset 250px 100px 100px -150px black, 
+                inset -250px 100px 100px -150px black;
+        background-image: url(../images/banner1.PNG);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 20px;
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        .portrait-logo {
+            margin: 0 auto;
+            
+            background-image: url(../images/dungeonkeeperlogo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 250px;
+            height: 100px;
+        }
+    }
+    
+    .player-portrait-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .player-portrait-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            .player-portrait {
+                background-image: url(../images/tavern2.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 auto;
+                width: 300px;
+                height: 300px;
+                background-color: tan;
+                border: 2px solid tan;
+            }
+            .pp-name {
+                color: white;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        .player-level-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 90%;
+            background-image: url(../images/scroll2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .pp-hTag-container {
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h2 {
+
+                }
+                
+            }
+            .pp-level-container {
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pp-lvl {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+                .pp-hp {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+                .pp-ar {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+                .pp-gp {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+            }
+            .pp-buttons-container {
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                button {
+                    cursor: pointer;
+                    padding: 15px;
+                    border: none;
+                    font-size: 15px;
+                    font-family: 'Sansita Swashed', cursive;
+                    background-color: tan;
+                    border-radius: 20px;
+                    box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                    outline: none;
+                }
+                #levelUp:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+                #adjustHp:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+                #adjustGp:active {
+                    transform: translateY(4px);
+                    box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                    background-color: rgb(156, 137, 110);
+                }
+                
+            }
+            
+        }
+        .pp-divider-div {
+            height: 20px;
+        }
+        .player-race-container {
+            
+            padding: 20px;
+            width: 70%;
+            background-image: url(../images/scroll2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+            .race-hTag-container {
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h2 {
+                
+                }
+            }
+            .pp-race-container {
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pp-race {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+                .pp-languages {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+                .pp-speed {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
+            }
+        }
+        
+    }
+    
+    
+    .playerSheet-nav {
+        margin-top: 20px;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        // padding-left: 100px;
+        // padding-right: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .ps-stats-link {
+            cursor: pointer;
+            background-color: tan;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 50px;
+            width: 25%;
+            // border-top: 2px solid black;
+            // border-left: 2px solid black;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 21px;
+                font-family: 'Acme', sans-serif;
+        }
+        .ps-inventory-link {
+            cursor: pointer;
+            background-color: rgb(156, 137, 110);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 50px;
+            width: 25%;
+            // border-top: 2px solid black;
+            // border-left: 2px solid black;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 21px;
+                font-family: 'Acme', sans-serif;
+        }
+        .ps-bio-link {
+            cursor: pointer;
+            background-color: rgb(156, 137, 110);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 50px;
+            width: 25%;
+            // border-top: 2px solid black;
+            // border-left: 2px solid black;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 21px;
+                font-family: 'Acme', sans-serif;
+        }
+        .ps-settings-link {
+            cursor: pointer;
+            background-color: rgb(156, 137, 110);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 50px;
+            width: 25%;
+            // border-top: 2px solid black;
+            // border-left: 2px solid black;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 21px;
+                font-family: 'Acme', sans-serif;
+        }
+    }
+
+    .playerSheet {
+        
+        background-color: tan;
+        height: 1200px;;
+        
+        .pp-stats-container {
+            padding-top: 50px;
+            padding-left: 35px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .pp-stats-level-con {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                .pp-stats {
+               
+                
+                    background-image: url(../images/parchment.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    justify-content: space-between;
+                    display: flex;
+                    flex-direction: row;
+                    height: 400px;
+                    box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                    padding: 20px;
+                    .pp-stats-hTag {
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h2 {
+                            font-family: 'Acme', sans-serif;
+                        }
+                    }
+                    .pp-stats-con {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .pp-str {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                        .pp-dex {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                        .pp-con {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                        .pp-int {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                        .pp-wis {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                        .pp-cha {
+                            font-size: 27px;
+                            font-family: 'Acme', sans-serif;
+                        }
+                    }
+                    .pp-stats-button-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        .pp-inc-str {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-str:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                        .pp-inc-dex {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-dex:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                        .pp-inc-con {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-con:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                        .pp-inc-int {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-int:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                        .pp-inc-wis {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-wis:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                        .pp-inc-cha {
+                            cursor: pointer;
+                            background-image: url(../images/plus2.png);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            border-radius: 10px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: tan;
+                            box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                        }
+                        .pp-inc-cha:active {
+                            transform: translateY(4px);
+                            box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                            background-color: rgb(156, 137, 110);
+                        }
+                    }
+    
+                    
+                }
+
+                .levelUp-con {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 50px;
+                    margin-top: 50px;
+                    .pp-confirmUp-Btn {
+                        cursor: pointer;
+                        background-color: rgb(236, 220, 80);
+                        border-radius: 100px;
+                        box-shadow: 0px 6px 3px 4px rgb(156, 137, 110);
+                        text-align: center;
+                        padding-top: 17px;
+                        width: 40%;
+                        height: 50px;
+                        font-family: 'Sansita Swashed', cursive;
+                    }
+                    .pp-confirmUp-Btn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                        background-color: rgb(156, 137, 110);
+                    }
+                    .pp-cancelUp-Btn {
+                        cursor: pointer;
+                        background-color: rgb(235, 45, 45);
+                        border-radius: 100px;
+                        box-shadow: 0px 6px 3px 4px rgb(156, 137, 110);
+                        text-align: center;
+                        padding-top: 17px;
+                        width: 40%;
+                        height: 50px;
+                        font-family: 'Sansita Swashed', cursive;
+                    }
+                    .pp-cancelUp-Btn:active {
+                        transform: translateY(4px);
+                        box-shadow: 0px 0px 3px 4px rgb(235, 45, 45);
+                        background-color: rgb(156, 137, 110);
+                    }
+                }
+
+
+            }
+            
+
+
+
+
+
+            .pp-skills {
+                background-image: url(../images/parchment.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: row;
+                height: 1000px;
+                width: 45%;
+                padding: 20px;
+                box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                .pp-skills-hTag {
+                    padding-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h2 {
+                        font-family: 'Acme', sans-serif;
+                        font-size: 20px;
+                    }
+                }
+                .pp-skills-con {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .pp-acr {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-ani {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-arc {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-ath {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-dec {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-his  {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-ins {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-inti {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-inv {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-med {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-nat {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-per {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-perf {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-pers {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-rel {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-sle {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-ste {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                    .pp-sur {
+                        font-size: 20px;
+                        font-family: 'Acme', sans-serif;
+                    }
+                }
+            }
+        }
+
+        .levelling-guide {
+            padding-top: 100px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            font-size: 17px;
+            
+        }
+        
+        
+    }
+
+}
+
+@media (max-width: 840px) {
+    .playerPage {
+        width: 100%;
+        .playerSheet {
+            height: 1800px;
+            .pp-stats-container {
+                display: flex;
+                flex-direction: column;
+                .pp-stats-level-con {
+                    width: 100%;
+                    .pp-stats {
+                        
+                        margin-bottom: 20px;
+                    }
+                }
+                
+                .pp-skills {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
