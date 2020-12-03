@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <div class="login-page">
+    <div class="login-page" style="display: none">
 
       <audio src="mp3/title.mp3" id="title-audio" loop="loop" autoplay="autoplay"></audio>
 
@@ -65,9 +65,9 @@
         </div>
       </div>
 
-      <div class="roomPage" style="display: none">
+      <div class="roomPage" style="display: none;">
         <div class="room-logo"></div>
-        <div class="roomButtons">
+        <div class="roomButtons" >
           <button id="create-room-content-btn">Create A New Dungeon</button>
           <button id="find-room-content-btn">Select An Existing Dungeon</button> 
         </div>
@@ -119,8 +119,19 @@
             </div>
           </div>
         </div>
-      
-    </div>
+
+        <div class="show-players-container" style="display: none;">
+          <div class="players-container">
+            <h2>Select Adventurer</h2>
+            <div class="playerList">
+              
+            </div>
+          </div>
+          <div class="enterPlayerBtn" style="display: none;">Enter</div>
+        </div>
+      </div>
+
+    
 
     </div>
       
@@ -377,21 +388,170 @@
 
     
 
-    <div class="show-players-container" style="display: none">
-      <div class="players-container"></div>
-    </div>
+   
 
-    <div class="playerSheet-container" style="display: none">
-      <h2 class="playerSheet-name">
+    <div class="playerPage">
+      <div class="playerBanner">
+        <div class="portrait-logo"></div>
+      </div>
+      <div class="player-portrait-row">
+
         
-      </h2>
-      <div class="playerSheet-stats">
-        <div class="playerStr">
-          <h3>Strength:</h3>
-          <div class="playerStr-data"></div>
+
+        <div class="player-portrait-container">
+          <div class="player-portrait"></div>
+          <h2 class="pp-name">Name</h2>
+        </div>
+
+        <div class="player-level-container">
+          <div class="pp-hTag-container">
+            <h2>Level: </h2>
+            <h2>Hitpoints: </h2>
+            <h2>Armor Rating: </h2>
+            <h2>Gold: </h2>
+            
+            
+          </div>
+          <div class="pp-level-container">
+            <div class="pp-lvl">12</div>
+            <div class="pp-hp">11</div>
+            <div class="pp-ar">7</div>
+            <div class="pp-gp">200</div>
+            
+          </div>
+          <div class="pp-buttons-container">
+            <button id="levelUp">Level Up</button>
+            <button id="adjustHp">Adjust HP</button>
+            <button id="adjustGp">Adjust Gold</button>
+          </div>
+          
+        </div>
+        <div class="pp-divider-div"></div>
+
+        <div class="player-race-container">
+          <div class="race-hTag-container">
+            <h2>Race: </h2>
+            <h2>Languages: </h2>
+            <h2>Speed: </h2>
+          </div>
+          <div class="pp-race-container">
+            <div class="pp-race">Elf</div>
+            <div class="pp-languages">Common, Elvish</div>
+            <div class="pp-speed">40</div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="playerSheet-nav">
+        <div class="ps-stats-link">Stats</div>
+        <div class="ps-inventory-link">Inventory</div>
+        <div class="ps-bio-link">Journal</div>
+        <div class="ps-settings-link">Settings</div>
+      </div>
+
+      <div class="playerSheet">
+        <div class="pp-stats-container">
+
+          <div class="pp-stats-level-con">
+            <div class="pp-stats">
+              <div class="pp-stats-hTag">
+                <h2>Strength: </h2>
+                <h2>Dexterity: </h2>
+                <h2>Constitution: </h2>
+                <h2>Intelligence: </h2>
+                <h2>Wisdom: </h2>
+                <h2>Charisma: </h2>
+                
+                
+              </div>
+              <div class="pp-stats-con">
+                <div class="pp-str">8</div>
+                <div class="pp-dex">7</div>
+                <div class="pp-con">10</div>
+                <div class="pp-int">9</div>
+                <div class="pp-wis">6</div>
+                <div class="pp-cha">9</div>
+              </div>
+              <div class="pp-stats-button-container" >
+                <div class="pp-inc-str"></div>
+                <div class="pp-inc-dex"></div>
+                <div class="pp-inc-con"></div>
+                <div class="pp-inc-int"></div>
+                <div class="pp-inc-wis"></div>
+                <div class="pp-inc-cha"></div>
+              </div>
+            
+            </div>
+            <div class="levelUp-con">
+              <div class="pp-confirmUp-Btn">Confirm</div>
+              <div class="pp-cancelUp-Btn">Cancel</div>
+            </div>
+          </div>
+          
+
+
+            <div class="pp-skills">
+              <div class="pp-skills-hTag">
+                <h2>Acrobatics (Dex): </h2>
+                <h2>Animal Handling (Wis): </h2>
+                <h2>Arcana (Int): </h2>
+                <h2>Athletics (Str): </h2>
+                <h2>Deception (Cha): </h2>
+                <h2>History (Int): </h2>
+                <h2>Insight (Wis): </h2>
+                <h2>Intimidation (Cha): </h2>
+                <h2>Investigation (Int): </h2>
+                <h2>Medicine (Int): </h2>
+                <h2>Nature (Wis): </h2>
+                <h2>Perception (Wis): </h2>
+                <h2>Performance (Cha): </h2>
+                <h2>Persuasion (Cha): </h2>
+                <h2>Religion (Int): </h2>
+                <h2>Sleight of Hand (Dex): </h2>
+                <h2>Stealth (Dex): </h2>
+                <h2>Survival (Wis): </h2>
+              </div>
+              <div class="pp-skills-con">
+                <div class="pp-acr">2</div>
+                <div class="pp-ani">0</div>
+                <div class="pp-arc">1</div>
+                <div class="pp-ath">-1</div>
+                <div class="pp-dec">0</div>
+                <div class="pp-his">0</div>
+                <div class="pp-ins">-2</div>
+                <div class="pp-inti">3</div>
+                <div class="pp-inv">0</div>
+                <div class="pp-med">1</div>
+                <div class="pp-nat">0</div>
+                <div class="pp-per">1</div>
+                <div class="pp-perf">-1</div>
+                <div class="pp-pers">-1</div>
+                <div class="pp-rel">0</div>
+                <div class="pp-sle">-3</div>
+                <div class="pp-ste">2</div>
+                <div class="pp-sur">2</div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="levelling-guide">
+            
+            <a href="https://roll20.net/compendium/dnd5e/Ability%20Scores#content">Click Here For Levelling Guide</a>
+          </div>
+          
         </div>
       </div>
-    </div>
+
+
+      
+        
+      
+      
+    
 
     <div class="errorModal" style="display: none; background-color: red;">
       <div class="error-content">
