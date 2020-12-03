@@ -452,7 +452,10 @@
       </div>
 
       <div class="playerSheet">
-        <div class="pp-stats-container">
+
+        <!--------STATS------------>
+
+        <div class="pp-stats-container" style="display: none;">
 
           <div class="pp-stats-level-con">
             <div class="pp-stats">
@@ -536,7 +539,118 @@
 
             </div>
 
+        </div>
+
+        <div class="pp-inventory-container">
+
+          <!------------WEAPONS/SPELLS------------>
+          <div class="pp-weapons-container">
+            
+            <div class="pp-weps-title">
+              <h2>Weapons / Spells</h2>
+            </div>
+
+            <div class="pp-weps-container">
+
+               <!------------WEAPONS LIST------------>
+
+              <div class="pp-weps-list">
+                <div class="pp-weps"></div>
+              </div>
+
+               <!------------WEAPONS ACTION------------>
+
+              <div class="pp-weps-action" style="display: none;">
+
+                 <!------------WEAPONS ACTION MODAL------------>
+
+                <div class="pp-weps-action-con" >
+                  <h1 id="weps-action-name">Sword of Burning</h1>
+              
+                  <button id="sellWep">Sell</button>
+                  <button id="dropWep">Drop</button>
+                  <button id="cancelWep">Cancel</button>
+                </div>
+                  
+                 <!------------WEAPONS SELL FOR MODAL------------>
+
+                  <div class="sellWepFor" style="display: none;">
+                    <h1>Enter Amount</h1>
+                    <input type="text" id="sellWepAmt">
+                    <button id="confirmSellWep">Sell</button>
+                    <button id="confirmCancelWep">Cancel</button>
+                  </div>
+                
+                
+              </div>
+
+            </div>
+
           </div>
+
+
+           <!---------------ARMOR------------------>
+
+          <div class="pp-armor-container">
+
+            <div class="pp-armor-title">
+              <h2>Armor</h2>
+            </div>
+
+            <div class="pp-armor-con">
+              <div class="pp-armor-list">
+                <div class="pp-armor-names"></div>
+                <div class="pp-armor-ratings"></div>
+              </div>
+            </div>
+
+            <div class="pp-armor-action" style="display: none;">
+              <h1>helmet</h1>
+              <button id="sellArmorBtn">Sell</button>
+              <button id="dropArmorBtn">Drop</button>
+              <button id="cancelArmorBtn">Cancel</button>
+            </div>
+            
+            <div class="pp-sellArmorFor" style="display: none;">
+              <h2>Enter Amount</h2>
+              <input type="text" id="sellArmorAmt">
+              <button id="confirm-sellArmor">Sell</button>
+              <button id="cancel-sellArmor">Cancel</button>
+            </div>
+
+
+          </div>
+
+          <!--------------ITEMS-------------->
+          <div class="pp-items-container">
+
+            <div class="pp-items-title">
+              <h2>Items</h2>
+            </div>
+
+            <div class="pp-items-list">
+              <div class="pp-items"></div>
+            </div>
+
+            <div class="pp-items-action" style="display: none;">
+              <h1>Potion</h1>
+              <button id="sellItemBtn">Sell</button>
+              <button id="dropItemBtn">Drop</button>
+              <button id="cancelItemBtn">Cancel</button>
+            </div>
+
+            <div class="pp-sellItemFor" style="display: none;">
+              <h2>Enter Amount</h2>
+              <input type="text" id="sellItemAmt">
+              <button id="confirm-sellItem">Sell</button>
+              <button id="cancel-sellItem">Cancel</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        
 
           <div class="levelling-guide">
             
