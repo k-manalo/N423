@@ -1274,6 +1274,33 @@ p {
         height: 300px;
         background-color: tan;
         border: 2px solid tan; }
+        .playerPage .player-portrait-row .player-portrait-container .player-portrait .pp-portrait-items .pp-armor {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100px;
+          width: 300px;
+          position: absolute;
+          margin-top: 195px;
+          margin-right: 100px; }
+        .playerPage .player-portrait-row .player-portrait-container .player-portrait .pp-portrait-items .pp-face {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 150px;
+          width: 150px;
+          position: absolute;
+          margin-top: 100px;
+          margin-left: 75px; }
+        .playerPage .player-portrait-row .player-portrait-container .player-portrait .pp-portrait-items .pp-helmet {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 200px;
+          width: 200px;
+          position: absolute;
+          margin-top: 80px;
+          margin-left: 50px; }
       .playerPage .player-portrait-row .player-portrait-container .pp-name {
         color: white;
         margin: 0 auto;
@@ -1340,6 +1367,137 @@ p {
           transform: translateY(4px);
           box-shadow: 0px 0px 3px 4px #ecdc50;
           background-color: #9c896e; }
+    .playerPage .player-portrait-row .levelUp-modal {
+      text-align: center;
+      height: 300px;
+      margin-bottom: 20px;
+      padding: 20px;
+      width: 90%;
+      background-image: url(../images/scroll2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column; }
+      .playerPage .player-portrait-row .levelUp-modal .levelUp-modal-buttons button {
+        cursor: pointer;
+        outline: none;
+        margin: 0 auto;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+        background-color: tan;
+        width: 50%;
+        border-radius: 200px;
+        font-size: 27px;
+        font-family: 'Acme', sans-serif;
+        box-shadow: 0px 6px 3px 4px #eb2d2d; }
+      .playerPage .player-portrait-row .levelUp-modal .levelUp-modal-buttons #levelUp-yes:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+      .playerPage .player-portrait-row .levelUp-modal .levelUp-modal-buttons #levelUp-no:active {
+        transform: translateY(4px);
+        box-shadow: 0px 0px 3px 4px #ecdc50;
+        background-color: #9c896e; }
+    .playerPage .player-portrait-row .adjustHp-modal {
+      text-align: center;
+      height: 320px;
+      margin-bottom: 20px;
+      padding: 20px;
+      width: 90%;
+      background-image: url(../images/scroll2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column; }
+      .playerPage .player-portrait-row .adjustHp-modal .adjustHp-modal-buttons {
+        display: flex;
+        flex-direction: column; }
+        .playerPage .player-portrait-row .adjustHp-modal .adjustHp-modal-buttons #pp-newHp {
+          outline: none;
+          margin: 0 auto;
+          margin-top: 20px;
+          border-radius: 200px;
+          border: none;
+          height: 40px;
+          margin-bottom: 20px;
+          width: 50%;
+          text-align: center; }
+        .playerPage .player-portrait-row .adjustHp-modal .adjustHp-modal-buttons button {
+          cursor: pointer;
+          outline: none;
+          margin: 0 auto;
+          height: 30px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border: none;
+          background-color: tan;
+          width: 50%;
+          border-radius: 200px;
+          font-size: 20px;
+          font-family: 'Acme', sans-serif;
+          box-shadow: 0px 6px 3px 4px #eb2d2d; }
+        .playerPage .player-portrait-row .adjustHp-modal .adjustHp-modal-buttons #confirmNewHp:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
+        .playerPage .player-portrait-row .adjustHp-modal .adjustHp-modal-buttons #cancelNewHp:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
+    .playerPage .player-portrait-row .adjustGp-modal {
+      text-align: center;
+      height: 320px;
+      margin-bottom: 20px;
+      padding: 20px;
+      width: 90%;
+      background-image: url(../images/scroll2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column; }
+      .playerPage .player-portrait-row .adjustGp-modal .adjustGp-modal-buttons {
+        display: flex;
+        flex-direction: column; }
+        .playerPage .player-portrait-row .adjustGp-modal .adjustGp-modal-buttons #pp-newGp {
+          margin: 0 auto;
+          margin-top: 20px;
+          border-radius: 200px;
+          border: none;
+          height: 40px;
+          margin-bottom: 20px;
+          width: 50%;
+          text-align: center;
+          outline: none; }
+        .playerPage .player-portrait-row .adjustGp-modal .adjustGp-modal-buttons button {
+          cursor: pointer;
+          outline: none;
+          margin: 0 auto;
+          height: 30px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border: none;
+          background-color: tan;
+          width: 50%;
+          border-radius: 200px;
+          font-size: 20px;
+          font-family: 'Acme', sans-serif;
+          box-shadow: 0px 6px 3px 4px #eb2d2d; }
+        .playerPage .player-portrait-row .adjustGp-modal .adjustGp-modal-buttons #confirmNewGp:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
+        .playerPage .player-portrait-row .adjustGp-modal .adjustGp-modal-buttons #cancelNewGp:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
     .playerPage .player-portrait-row .pp-divider-div {
       height: 20px; }
     .playerPage .player-portrait-row .player-race-container {
@@ -1363,6 +1521,9 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
+        .playerPage .player-portrait-row .player-race-container .pp-race-container .pp-class {
+          font-size: 27px;
+          font-family: 'Acme', sans-serif; }
         .playerPage .player-portrait-row .player-race-container .pp-race-container .pp-race {
           font-size: 27px;
           font-family: 'Acme', sans-serif; }
@@ -1423,7 +1584,7 @@ p {
       font-family: 'Acme', sans-serif; }
   .playerPage .playerSheet {
     background-color: tan;
-    height: 1200px; }
+    height: 100%; }
     .playerPage .playerSheet .pp-stats-container {
       padding-top: 50px;
       padding-left: 35px;
@@ -1906,7 +2067,7 @@ p {
           margin-top: 20px;
           text-align: center; }
         .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-list {
-          background-image: url(../images/scroll2.png);
+          background-image: url(../images/items.png);
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -1919,7 +2080,8 @@ p {
           .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-list .pp-items {
             margin-top: 20px;
             font-size: 27px;
-            font-family: 'Acme', sans-serif; }
+            font-family: 'Acme', sans-serif;
+            background-color: rgba(156, 137, 110, 0.65); }
         .playerPage .playerSheet .pp-inventory-container .pp-items-container .pp-items-action {
           background-image: url(../images/parchment.jpg);
           background-size: cover;
@@ -1997,6 +2159,74 @@ p {
             transform: translateY(4px);
             box-shadow: 0px 0px 3px 4px #ecdc50;
             background-color: #9c896e; }
+    .playerPage .playerSheet .pp-biography-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .playerPage .playerSheet .pp-biography-container h2 {
+        margin-top: 20px; }
+      .playerPage .playerSheet .pp-biography-container .pp-biography {
+        margin: 0 auto;
+        width: 73%;
+        height: 600px;
+        background-image: url(../images/book4.png);
+        background-size: cover;
+        background-repeat: no-repeat; }
+        .playerPage .playerSheet .pp-biography-container .pp-biography .pp-bio {
+          padding-top: 50px;
+          text-align: center;
+          font-family: 'Acme', sans-serif;
+          font-size: 23px;
+          padding-left: 150px;
+          padding-right: 100px; }
+      .playerPage .playerSheet .pp-biography-container .pp-traits-con {
+        margin: 0 auto;
+        width: 60%;
+        height: 300px;
+        background-image: url(../images/parchment.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0px 6px 15px 4px #030303; }
+        .playerPage .playerSheet .pp-biography-container .pp-traits-con .pp-traits {
+          padding-top: 20px;
+          text-align: center;
+          font-family: 'Acme', sans-serif;
+          font-size: 23px;
+          padding-left: 150px;
+          padding-right: 100px; }
+    .playerPage .playerSheet .pp-settings-container {
+      display: flex;
+      flex-direction: column; }
+      .playerPage .playerSheet .pp-settings-container .pp-settings-buttons {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column; }
+        .playerPage .playerSheet .pp-settings-container .pp-settings-buttons button {
+          cursor: pointer;
+          outline: none;
+          margin: 0 auto;
+          height: 50px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: none;
+          background-color: tan;
+          width: 50%;
+          border-radius: 200px;
+          font-size: 27px;
+          font-family: 'Acme', sans-serif;
+          box-shadow: 0px 6px 3px 4px #eb2d2d; }
+        .playerPage .playerSheet .pp-settings-container .pp-settings-buttons #switchPlayers:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
+        .playerPage .playerSheet .pp-settings-container .pp-settings-buttons #viewCredits:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
+        .playerPage .playerSheet .pp-settings-container .pp-settings-buttons #logout-btn:active {
+          transform: translateY(4px);
+          box-shadow: 0px 0px 3px 4px #ecdc50;
+          background-color: #9c896e; }
     .playerPage .playerSheet .levelling-guide {
       padding-top: 100px;
       display: flex;

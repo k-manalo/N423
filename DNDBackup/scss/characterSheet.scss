@@ -46,6 +46,41 @@
                 height: 300px;
                 background-color: tan;
                 border: 2px solid tan;
+                .pp-portrait-items {
+                    .pp-armor {
+                        // background-image: url(../images/armor/armor8.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 100px;
+                        width: 300px;
+                        position: absolute;
+                        margin-top: 195px;
+                        margin-right: 100px;
+                    }
+                    .pp-face {
+                        // background-image: url(../images/faces/face4.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 150px;
+                        width: 150px;
+                        position: absolute;
+                        margin-top: 100px;
+                        margin-left: 75px;
+                    }
+                    .pp-helmet {
+                        // background-image: url(../images/helmets/helmet8.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 200px;
+                        width: 200px;
+                        position: absolute;
+                        margin-top: 80px;
+                        margin-left: 50px;
+                    }
+                }
             }
             .pp-name {
                 color: white;
@@ -133,6 +168,162 @@
             }
             
         }
+
+        .levelUp-modal {
+            text-align: center;
+            height: 300px;
+
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 90%;
+            background-image: url(../images/scroll2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            .levelUp-modal-buttons {
+                button {
+                    cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                }
+                #levelUp-yes:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+                #levelUp-no:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+            }
+            
+        }
+        .adjustHp-modal {
+            text-align: center;
+            height: 320px;
+
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 90%;
+            background-image: url(../images/scroll2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            .adjustHp-modal-buttons {
+                display: flex;
+                flex-direction: column;
+                #pp-newHp {
+                    outline: none;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    border-radius: 200px;
+                    border: none;
+                    height: 40px;
+                    margin-bottom: 20px;
+                    width: 50%;
+                    text-align: center;
+                }
+                button {
+                    cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 30px;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 20px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                }
+                #confirmNewHp:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+                #cancelNewHp:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+            }
+        }
+        .adjustGp-modal {
+            text-align: center;
+            height: 320px;
+
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 90%;
+            background-image: url(../images/scroll2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            .adjustGp-modal-buttons {
+                display: flex;
+                flex-direction: column;
+                #pp-newGp {
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    border-radius: 200px;
+                    border: none;
+                    height: 40px;
+                    margin-bottom: 20px;
+                    width: 50%;
+                    text-align: center;
+                    outline: none;
+                }
+                button {
+                    cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 30px;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 20px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                }
+                #confirmNewGp:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+                #cancelNewGp:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+            }
+        }
+
+
         .pp-divider-div {
             height: 20px;
         }
@@ -163,6 +354,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                .pp-class {
+                    font-size: 27px;
+                    font-family: 'Acme', sans-serif;
+                }
                 .pp-race {
                     font-size: 27px;
                     font-family: 'Acme', sans-serif;
@@ -251,7 +446,7 @@
     .playerSheet {
         
         background-color: tan;
-        height: 1200px;;
+        height: 100%;
         
         .pp-stats-container {
             padding-top: 50px;
@@ -879,7 +1074,7 @@
                 }
 
                 .pp-items-list {
-                    background-image: url(../images/scroll2.png);
+                    background-image: url(../images/items.png);
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -893,6 +1088,7 @@
                         margin-top: 20px;
                         font-size: 27px;
                                 font-family: 'Acme', sans-serif;
+                                background-color: rgba(156, 137, 110, .65);
                     }
                 }
 
@@ -994,6 +1190,95 @@
 
                 }
                 
+            }
+        }
+
+        .pp-biography-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+                margin-top: 20px;
+            }
+            .pp-biography {
+                margin: 0 auto;
+                width: 73%;
+                height: 600px;
+                background-image: url(../images/book4.png);
+               background-size: cover;
+                //background-position: center;
+                background-repeat: no-repeat;
+               
+                .pp-bio {
+                    padding-top: 50px;
+                    text-align: center;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 23px;
+                    padding-left: 150px;
+                    padding-right: 100px;
+                  
+                    
+                }
+            }
+            
+            .pp-traits-con {
+                margin: 0 auto;
+                width: 60%;
+                height: 300px;
+                background-image: url(../images/parchment.jpg);
+               background-size: cover;
+                //background-position: center;
+                background-repeat: no-repeat;
+                box-shadow: 0px 6px 15px 4px rgb(3, 3, 3);
+                .pp-traits {
+                    padding-top: 20px;
+                    text-align: center;
+                    font-family: 'Acme', sans-serif;
+                    font-size: 23px;
+                    padding-left: 150px;
+                    padding-right: 100px;
+                    
+                }
+            }
+        }
+
+        .pp-settings-container {
+            display: flex;
+            flex-direction: column;
+            .pp-settings-buttons {
+                margin-top: 60px;
+                display: flex;
+            flex-direction: column;
+                button {
+                    cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 50%;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                }
+                #switchPlayers:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+                #viewCredits:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
+                #logout-btn:active {
+                    transform: translateY(4px);
+                                box-shadow: 0px 0px 3px 4px rgb(236, 220, 80);
+                                background-color: rgb(156, 137, 110);
+                }
             }
         }
         

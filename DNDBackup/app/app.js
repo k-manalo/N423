@@ -1310,7 +1310,7 @@ function initListeners() {
 
         var level = 1;
         let gp = "";
-        let hp = "";
+        var hp = 0;
         let initiative = "";
         let strength = "";
         let dexterity = "";
@@ -2103,15 +2103,230 @@ function initListeners() {
     //----------------------------------LOAD CHARACTER SHEET-------------------------------
 
     function loadCharacterSheetData(charID) {
-        $(".playerPage").css("display", "flex")
+        $(".playerPage").css("display", "unset")
+        $(".show-players-container").css("display", "none")
+        $(".enterPlayerBtn").css("display", "none")
+        $(".roomPage").css("display", "none")
+        $(".login-page").css("display", "none")
         _db
         .collection("DDUsers").doc("players").collection("player").doc(charID)
         .get()
         .then(function(doc) {
             let charData = doc.data()
 
-            $(".playerSheet-name").html(charData.playerName)
+            //------player portrait
+
+            $(".pp-name").html(charData.playerName)
+            $(".pp-armor").css("background-image", charData.parmor)
+            $(".pp-face").css("background-image", charData.pface)
+            $(".pp-helmet").css("background-image", charData.phelmet)
+
+            //--------player level
+
+            $(".pp-lvl").html(charData.level)
+            $(".pp-hp").html(charData.hp)
+            $(".pp-ar").html(charData.armor)
+            $(".pp-gp").html(charData.gp)
+
+            //---------race
+
+            $(".pp-class").html(charData.class)
+            $(".pp-race").html(charData.race)
+            $(".pp-languages").html(charData.language)
+            $(".pp-speed").html(charData.speed)
+
+            //----------stats
+
+            $(".pp-str").html(charData.strength)
+            $(".pp-dex").html(charData.dexterity)
+            $(".pp-con").html(charData.constitution)
+            $(".pp-int").html(charData.intelligence)
+            $(".pp-wis").html(charData.wisdom)
+            $(".pp-cha").html(charData.charisma)
+
+            //------------skills
+
+            $(".pp-acr").html(charData.acrobatics)
+            $(".pp-ani").html(charData.animal)
+            $(".pp-arc").html(charData.arcana)
+            $(".pp-ath").html(charData.athletics)
+            $(".pp-dec").html(charData.deception)
+            $(".pp-his").html(charData.history)
+            $(".pp-ins").html(charData.insight)        
+            $(".pp-inti").html(charData.intimidation)
+            $(".pp-inv").html(charData.investigation)
+            $(".pp-med").html(charData.medicine)
+            $(".pp-nat").html(charData.nature)
+            $(".pp-per").html(charData.perception)
+            $(".pp-perf").html(charData.performance)
+            $(".pp-pers").html(charData.persuasion)
+            $(".pp-rel").html(charData.religion)
+            $(".pp-sle").html(charData.sleight)
+            $(".pp-ste").html(charData.stealth)
+            $(".pp-sur").html(charData.survival)
+
+            playerStats(charID);
         })
+
+    }
+
+    function playerStats(levelUpID) {
+        
+        //console.log(levelUpID)
+        var lvlUpPts = 0;
+
+        //------------level up-------------
+
+        $("#levelUp").click(function() {
+
+            $(".levelUp-modal").css("display", "flex");
+            $(".player-level-container").css("display", "none");
+
+            $("#levelUp-yes").click(function() {
+
+                $(".levelUp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
+
+                var levelUpCol = _db
+                .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                let newLevel = 0
+                let newHp = 0
+
+                levelUpCol
+                .get()
+                .then(function(doc) {
+
+                    let levelUpData = doc.data();
+                    
+
+                    
+                        newLevel = levelUpData.level + 1;
+                        newHp = levelUpData.hp + 6;
+                        
+                        
+                        levelUpPlayer(newLevel, newHp)
+                        
+                })
+            })
+            $("#levelUp-no").click(function() {
+                $(".levelUp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
+
+            })
+
+            
+
+        })
+
+        function levelUpPlayer(newPlayerLevel, newPlayerHp) {
+
+            console.log(newPlayerLevel)
+            console.log(newPlayerHp)
+
+            _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+            .update({
+                
+                level: newPlayerLevel,
+                hp: newPlayerHp
+            })
+
+            $(".pp-lvl").html(newPlayerLevel)
+            $(".pp-hp").html(newPlayerHp)
+        }
+
+        //------------adjust hp--------------
+
+        $("#adjustHp").click(function() {
+
+            $(".adjustHp-modal").css("display", "flex");
+            $(".player-level-container").css("display", "none");
+
+            $("#confirmNewHp").click(function() {
+
+                
+                $(".adjustHp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
+
+                var adjustHpCol = _db
+                .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                var ppNewHp = parseInt($("#pp-newHp").val(), 10)
+                
+                adjustHpCol
+                .get()
+                .then(function(doc) {
+                    let adjustHpData = doc.data()
+                    console.log(adjustHpData.hp)
+
+                    var newHp = adjustHpData.hp + ppNewHp;
+
+                    console.log(newHp)
+                    confirmNewHp(newHp)
+                })
+
+                
+
+            })
+        })
+
+        function confirmNewHp(confirmHp) {
+            _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+            .update({
+                
+                hp: confirmHp
+            })
+
+            $(".pp-hp").html(confirmHp)
+        }
+
+        //------------adjust gp---------------
+
+        $("#adjustGp").click(function() {
+
+            $(".adjustGp-modal").css("display", "flex");
+            $(".player-level-container").css("display", "none");
+
+            $("#confirmNewGp").click(function() {
+
+                
+                $(".adjustGp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
+
+                var adjustGpCol = _db
+                .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                var ppNewGp = parseInt($("#pp-newGp").val(), 10)
+                
+                adjustGpCol
+                .get()
+                .then(function(doc) {
+                    let adjustGpData = doc.data()
+                    console.log(adjustGpData.gp)
+
+                    var newGp = adjustGpData.gp + ppNewGp;
+
+                    console.log(newGp)
+                    confirmNewGp(newGp)
+                })
+
+                
+
+            })
+        })
+
+        function confirmNewGp(confirmGp) {
+            _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+            .update({
+                
+                gp: confirmGp
+            })
+
+            $(".pp-gp").html(confirmGp)
+        }
 
     }
 
