@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <div class="login-page" style="display: none">
+    <div class="login-page">
 
       <audio src="mp3/title.mp3" id="title-audio" loop="loop" autoplay="autoplay"></audio>
 
@@ -59,7 +59,7 @@
           <input type="password" id="lPassword" placeholder="Password">
           <div class="login-btn-container">
             <button id="login-btn">Enter</button>
-            <button id="logout-btn">Logout</button>
+            
           </div>
           
         </div>
@@ -390,7 +390,7 @@
 
    
 
-    <div class="playerPage">
+    <div class="playerPage" style="display: none;">
       <div class="playerBanner">
         <div class="portrait-logo"></div>
       </div>
@@ -399,8 +399,14 @@
         
 
         <div class="player-portrait-container">
-          <div class="player-portrait"></div>
-          <h2 class="pp-name">Name</h2>
+          <div class="player-portrait">
+            <div class="pp-portrait-items">
+              <div class="pp-armor"></div>
+              <div class="pp-face"></div>
+              <div class="pp-helmet"></div>
+            </div>
+          </div>
+          <h2 class="pp-name"></h2>
         </div>
 
         <div class="player-level-container">
@@ -413,10 +419,10 @@
             
           </div>
           <div class="pp-level-container">
-            <div class="pp-lvl">12</div>
-            <div class="pp-hp">11</div>
-            <div class="pp-ar">7</div>
-            <div class="pp-gp">200</div>
+            <div class="pp-lvl"></div>
+            <div class="pp-hp"></div>
+            <div class="pp-ar"></div>
+            <div class="pp-gp"></div>
             
           </div>
           <div class="pp-buttons-container">
@@ -426,18 +432,50 @@
           </div>
           
         </div>
+
+        <div class="levelUp-modal" style="display: none;">
+          <h2>Level Up?</h2>
+          <h3>(This Action Cannot Be Undone)</h3>
+          <div class="levelUp-modal-buttons">
+            <button id="levelUp-yes">Yes</button>
+            <button id="levelUp-no">No</button>
+          </div>
+        </div>
+        
+        <div class="adjustHp-modal" style="display: none;">
+          <h2>Adjust Hitpoints</h2>
+          <h3>(Enter Negative Value to Lose Health)
+            <div class="adjustHp-modal-buttons" >
+              <input type="number" id="pp-newHp">
+              <button id="confirmNewHp">Confirm</button>
+              <button id="cancelNewHp">Cancel</button>
+            </div>
+        </div>
+
+        <div class="adjustGp-modal" style="display: none;">
+          <h2>Adjust Gold</h2>
+          <h3>(Enter Negative Value to Lose Gold)
+            <div class="adjustGp-modal-buttons">
+              <input type="number" id="pp-newGp">
+              <button id="confirmNewGp">Confirm</button>
+              <button id="cancelNewGp">Cancel</button>
+            </div>
+        </div>
+
         <div class="pp-divider-div"></div>
 
         <div class="player-race-container">
           <div class="race-hTag-container">
+            <h2>Class: </h2>
             <h2>Race: </h2>
             <h2>Languages: </h2>
             <h2>Speed: </h2>
           </div>
           <div class="pp-race-container">
-            <div class="pp-race">Elf</div>
-            <div class="pp-languages">Common, Elvish</div>
-            <div class="pp-speed">40</div>
+            <div class="pp-class"></div>
+            <div class="pp-race"></div>
+            <div class="pp-languages"></div>
+            <div class="pp-speed"></div>
           </div>
         </div>
 
@@ -455,7 +493,7 @@
 
         <!--------STATS------------>
 
-        <div class="pp-stats-container" style="display: none;">
+        <div class="pp-stats-container" >
 
           <div class="pp-stats-level-con">
             <div class="pp-stats">
@@ -470,12 +508,12 @@
                 
               </div>
               <div class="pp-stats-con">
-                <div class="pp-str">8</div>
-                <div class="pp-dex">7</div>
-                <div class="pp-con">10</div>
-                <div class="pp-int">9</div>
-                <div class="pp-wis">6</div>
-                <div class="pp-cha">9</div>
+                <div class="pp-str"></div>
+                <div class="pp-dex"></div>
+                <div class="pp-con"></div>
+                <div class="pp-int"></div>
+                <div class="pp-wis"></div>
+                <div class="pp-cha"></div>
               </div>
               <div class="pp-stats-button-container" >
                 <div class="pp-inc-str"></div>
@@ -541,7 +579,9 @@
 
         </div>
 
-        <div class="pp-inventory-container">
+        <!------------INVENTORY------------>
+
+        <div class="pp-inventory-container" style="display: none;">
 
           <!------------WEAPONS/SPELLS------------>
           <div class="pp-weapons-container">
@@ -648,6 +688,31 @@
 
           </div>
 
+        </div>
+
+        <!---------------BIOGRAPHY--------------->
+
+        <div class="pp-biography-container" style="display: none;">
+          <h2>Biography</h2>
+          <div class="pp-biography">
+            
+            <div class="pp-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur autem commodi? Debitis deserunt perspiciatis obcaecati officia fugiat nobis? Eveniet officiis minus ut soluta, ullam modi nisi nobis atque aperiam.</div>
+          </div>
+          <h2>Traits</h2>
+          <div class="pp-traits-con">
+           
+            <div class="pp-traits">Tall, Hates Dwarves, Loves Wine</div>
+          </div>
+        </div>
+
+        <!----------------SETTINGS------------>
+
+        <div class="pp-settings-container" style="display: none;">
+          <div class="pp-settings-buttons">
+            <button id="switchPlayers">Select Player</button>
+            <button id="viewCredits">Credits</button>
+            <button id="logout-btn">Logout</button>
+          </div>
         </div>
 
         
