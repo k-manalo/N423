@@ -390,7 +390,7 @@
 
    
 
-    <div class="playerPage" style="display: none;">
+    <div class="playerPage"  style="display: none;">
       <div class="playerBanner">
         <div class="portrait-logo"></div>
       </div>
@@ -496,6 +496,15 @@
         <div class="pp-stats-container" >
 
           <div class="pp-stats-level-con">
+
+            <div class="points-left-con"  style="display: none;">
+              <h2>Choose 3 Stats</h2>
+              <div class="pt-con">
+                <h2>Points: </h2>
+                <div class="points"></div>
+              </div>
+            </div>
+
             <div class="pp-stats">
               <div class="pp-stats-hTag">
                 <h2>Strength: </h2>
@@ -515,7 +524,7 @@
                 <div class="pp-wis"></div>
                 <div class="pp-cha"></div>
               </div>
-              <div class="pp-stats-button-container" >
+              <div class="pp-stats-button-container" style="display: none;">
                 <div class="pp-inc-str"></div>
                 <div class="pp-inc-dex"></div>
                 <div class="pp-inc-con"></div>
@@ -525,7 +534,7 @@
               </div>
             
             </div>
-            <div class="levelUp-con">
+            <div class="levelUp-con" style="display: none;">
               <div class="pp-confirmUp-Btn">Confirm</div>
               <div class="pp-cancelUp-Btn">Cancel</div>
             </div>
@@ -555,24 +564,24 @@
                 <h2>Survival (Wis): </h2>
               </div>
               <div class="pp-skills-con">
-                <div class="pp-acr">2</div>
-                <div class="pp-ani">0</div>
-                <div class="pp-arc">1</div>
-                <div class="pp-ath">-1</div>
-                <div class="pp-dec">0</div>
-                <div class="pp-his">0</div>
-                <div class="pp-ins">-2</div>
-                <div class="pp-inti">3</div>
-                <div class="pp-inv">0</div>
-                <div class="pp-med">1</div>
-                <div class="pp-nat">0</div>
-                <div class="pp-per">1</div>
-                <div class="pp-perf">-1</div>
-                <div class="pp-pers">-1</div>
-                <div class="pp-rel">0</div>
-                <div class="pp-sle">-3</div>
-                <div class="pp-ste">2</div>
-                <div class="pp-sur">2</div>
+                <div class="pp-acr"></div>
+                <div class="pp-ani"></div>
+                <div class="pp-arc"></div>
+                <div class="pp-ath"></div>
+                <div class="pp-dec"></div>
+                <div class="pp-his"></div>
+                <div class="pp-ins"></div>
+                <div class="pp-inti"></div>
+                <div class="pp-inv"></div>
+                <div class="pp-med"></div>
+                <div class="pp-nat"></div>
+                <div class="pp-per"></div>
+                <div class="pp-perf"></div>
+                <div class="pp-pers"></div>
+                <div class="pp-rel"></div>
+                <div class="pp-sle"></div>
+                <div class="pp-ste"></div>
+                <div class="pp-sur"></div>
               </div>
 
             </div>
@@ -597,6 +606,9 @@
               <div class="pp-weps-list">
                 <div class="pp-weps"></div>
               </div>
+              <div class="selectWepBtns">
+                <!-- <button id="selectWepBtn">Select</button> -->
+              </div>
 
                <!------------WEAPONS ACTION------------>
 
@@ -605,7 +617,11 @@
                  <!------------WEAPONS ACTION MODAL------------>
 
                 <div class="pp-weps-action-con" >
-                  <h1 id="weps-action-name">Sword of Burning</h1>
+                  <h1 id="weps-action-name"></h1>
+
+                  <!-- <select name="itemSelect" id="selectWep">
+                    <option value="none"></option>
+                  </select> -->
               
                   <button id="sellWep">Sell</button>
                   <button id="dropWep">Drop</button>
@@ -639,8 +655,8 @@
 
             <div class="pp-armor-con">
               <div class="pp-armor-list">
-                <div class="pp-armor-names"></div>
-                <div class="pp-armor-ratings"></div>
+                <!-- <div class="pp-armor-names"></div>
+                <div class="pp-armor-ratings"></div> -->
               </div>
             </div>
 
@@ -696,12 +712,12 @@
           <h2>Biography</h2>
           <div class="pp-biography">
             
-            <div class="pp-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aspernatur autem commodi? Debitis deserunt perspiciatis obcaecati officia fugiat nobis? Eveniet officiis minus ut soluta, ullam modi nisi nobis atque aperiam.</div>
+            <div class="pp-bio"></div>
           </div>
           <h2>Traits</h2>
           <div class="pp-traits-con">
            
-            <div class="pp-traits">Tall, Hates Dwarves, Loves Wine</div>
+            <div class="pp-traits"></div>
           </div>
         </div>
 
@@ -709,9 +725,16 @@
 
         <div class="pp-settings-container" style="display: none;">
           <div class="pp-settings-buttons">
-            <button id="switchPlayers">Select Player</button>
+            <button id="switchPlayers">Main Menu</button>
+            <button id="deletePlayer">Delete Player</button>
             <button id="viewCredits">Credits</button>
             <button id="logout-btn">Logout</button>
+          </div>
+          <div class="showCredits" style="display: none">
+            <div class="creditsBack">Back</div>
+            <h2>Created By: Kyle Manalo</h2>
+            <h3>Special thanks to Reddit user u/TheFlyingMinotaur for the character art assets. Click here to incorporate these assets into your own game:</h3>
+            <a href="https://www.reddit.com/r/DnD/comments/8x4lzb/oc_i_make_character_portraits_and_tokens_for/">Character Creator Thread</a>
           </div>
         </div>
 
@@ -723,6 +746,8 @@
           </div>
           
         </div>
+
+
       </div>
 
 
