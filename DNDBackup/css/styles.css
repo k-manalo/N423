@@ -1234,7 +1234,7 @@ p {
     width: 100%; } }
 
 .playerPage {
-  background-color: black;
+  background-color: linear-gradient(black, tan);
   height: 2100px;
   width: 66%;
   margin: 0 auto; }
@@ -1584,7 +1584,7 @@ p {
       font-family: 'Acme', sans-serif; }
   .playerPage .playerSheet {
     background-color: tan;
-    height: 100%; }
+    height: 1800px; }
     .playerPage .playerSheet .pp-stats-container {
       padding-top: 50px;
       padding-left: 35px;
@@ -1596,6 +1596,19 @@ p {
         display: flex;
         flex-direction: column;
         width: 45%; }
+        .playerPage .playerSheet .pp-stats-container .pp-stats-level-con .points-left-con {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 20px;
+          justify-content: space-between; }
+          .playerPage .playerSheet .pp-stats-container .pp-stats-level-con .points-left-con .pt-con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+            .playerPage .playerSheet .pp-stats-container .pp-stats-level-con .points-left-con .pt-con .points {
+              margin-left: 25px;
+              font-size: 40px; }
         .playerPage .playerSheet .pp-stats-container .pp-stats-level-con .pp-stats {
           background-image: url(../images/parchment.jpg);
           background-position: center;
@@ -1877,6 +1890,15 @@ p {
               text-align: center;
               font-family: 'Acme', sans-serif;
               font-size: 27px; }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list .pp-weps .wepName {
+                margin-top: 20px;
+                background-color: rgba(156, 137, 110, 0.5); }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list .pp-weps .wepAttack {
+                background-color: rgba(156, 137, 110, 0.5); }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list .pp-weps .wepDamage {
+                background-color: rgba(156, 137, 110, 0.5); }
+              .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-list .pp-weps .wepType {
+                background-color: rgba(156, 137, 110, 0.5); }
           .playerPage .playerSheet .pp-inventory-container .pp-weapons-container .pp-weps-container .pp-weps-action {
             background-image: url(../images/parchment.jpg);
             background-size: cover;
@@ -1966,8 +1988,9 @@ p {
           .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con .pp-armor-list {
             padding-top: 20px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between; }
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%; }
             .playerPage .playerSheet .pp-inventory-container .pp-armor-container .pp-armor-con .pp-armor-list .pp-armor-names {
               padding-left: 20%;
               padding-right: 20%;
@@ -2227,6 +2250,27 @@ p {
           transform: translateY(4px);
           box-shadow: 0px 0px 3px 4px #ecdc50;
           background-color: #9c896e; }
+      .playerPage .playerSheet .pp-settings-container .showCredits {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center; }
+        .playerPage .playerSheet .pp-settings-container .showCredits .creditsBack {
+          cursor: pointer;
+          outline: none;
+          margin: 0 auto;
+          height: 50px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: none;
+          background-color: tan;
+          width: 200px;
+          border-radius: 200px;
+          font-size: 27px;
+          font-family: 'Acme', sans-serif;
+          box-shadow: 0px 6px 3px 4px #eb2d2d; }
     .playerPage .playerSheet .levelling-guide {
       padding-top: 100px;
       display: flex;
@@ -2248,3 +2292,7 @@ p {
             margin-bottom: 20px; }
         .playerPage .playerSheet .pp-stats-container .pp-skills {
           width: 100%; } }
+
+@media (min-width: 841px) {
+  .playerSheet {
+    height: 1800px; } }

@@ -1056,22 +1056,30 @@ function initListeners() {
             var errorMessage = error.message;
             console.log(errorMessage + ' ' + errorCode + ' ', error)
             if(errorCode == "auth/email-already-in-use") {
-                $(".errorModal").css("display", "flex")
-                $(".error-message").html("This Email is already in use.")
+                
+                alert("This Email is already in use.")
 
-                $("#closeError").click(function() {
-                    $(".errorModal").css("display", "none")
-                })
+                
             }
             if(errorCode == "auth/weak-password") {
-                $(".errorModal").css("display", "flex")
-                $(".error-message").html("Password must be at least 8 characters.")
+                
+                alert("Password must be at least 8 characters.")
 
-                $("#closeError").click(function() {
-                    $(".errorModal").css("display", "none")
-                })
+                
+            }
+            if(errorCode == "auth/invalid-email") {
+                
+                alert("Password must be at least 8 characters.")
+
+                
             }
         })
+        .then(function() {
+            $(".signupPage").css("display", "none")
+            $(".signin-content").css("display", "unset")
+        })
+
+        
        
      })
       //-------------------------------------------------------------LOGIN----------------------------------------------------------
@@ -1119,6 +1127,11 @@ function initListeners() {
        }).catch(function (error) {
            console.log("signout error")
        })
+
+       $(".playerPage").css("display", "none")
+            $(".login-page").css("display", "flex")
+            $(".signin-content").css("display", "unset")
+            
     })
 
     //---------------------------------------------------------NAVIGATION-----------------------------------------------------
@@ -1214,7 +1227,7 @@ function initListeners() {
                 let roomData = doc.data()
                 
                 console.log(roomData.roomName)
-                console.log(roomData.roomCode)
+                
                 $(".roomCode-modal").css("display", "flex");
                 $("#enterCode").click(function() {
                     if($("#inputCode").val() == roomData.roomCode) {
@@ -2043,22 +2056,20 @@ function initListeners() {
                 armor: armor,
                 armorI: [
                     {
-                        armorA: armorA
+                        name: armorA
                     },
                     {
-                        armorB: armorB
+                        name: armorB
                     },
                 ],
                 weapons: [
                     {
-                        w1: [
-                            {
-                                name: wName,
-                                attack: wAttack,
-                                type: wType,
-                                damage: wDamage,
-                            }
-                        ]
+                        
+                        name: wName,
+                        attack: wAttack,
+                        type: wType,
+                        damage: wDamage,
+                            
                     }
                 ],
                 initiative: initiative,
@@ -2108,6 +2119,53 @@ function initListeners() {
         $(".enterPlayerBtn").css("display", "none")
         $(".roomPage").css("display", "none")
         $(".login-page").css("display", "none")
+
+        $(".ps-stats-link").click(function() {
+            $(".pp-stats-container").css("display", "flex")
+            $(".pp-inventory-container").css("display", "none")
+            $(".pp-biography-container").css("display", "none")
+            $(".pp-settings-container").css("display", "none")
+
+            $(".ps-stats-link").css("background-color", "tan")
+            $(".ps-inventory-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-bio-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-settings-link").css("background-color", "rgb(156, 137, 110)")
+        })
+        $(".ps-inventory-link").click(function() {
+            $(".pp-stats-container").css("display", "none")
+            $(".pp-inventory-container").css("display", "flex")
+            $(".pp-biography-container").css("display", "none")
+            $(".pp-settings-container").css("display", "none")
+
+            $(".ps-stats-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-inventory-link").css("background-color", "tan")
+            $(".ps-bio-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-settings-link").css("background-color", "rgb(156, 137, 110)")
+        })
+        $(".ps-bio-link").click(function() {
+            $(".pp-stats-container").css("display", "none")
+            $(".pp-inventory-container").css("display", "none")
+            $(".pp-biography-container").css("display", "flex")
+            $(".pp-settings-container").css("display", "none")
+
+            $(".ps-stats-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-inventory-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-bio-link").css("background-color", "tan")
+            $(".ps-settings-link").css("background-color", "rgb(156, 137, 110)")
+        })
+        $(".ps-settings-link").click(function() {
+            $(".pp-stats-container").css("display", "none")
+            $(".pp-inventory-container").css("display", "none")
+            $(".pp-biography-container").css("display", "none")
+            $(".pp-settings-container").css("display", "flex")
+
+            $(".ps-stats-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-inventory-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-bio-link").css("background-color", "rgb(156, 137, 110)")
+            $(".ps-settings-link").css("background-color", "tan")
+        })
+
+
         _db
         .collection("DDUsers").doc("players").collection("player").doc(charID)
         .get()
@@ -2168,11 +2226,202 @@ function initListeners() {
             playerStats(charID);
         })
 
+        _db
+        .collection("DDUsers").doc("players").collection("player").doc(charID)
+        .get()
+        .then(function(doc) {
+            let wepData = doc.data()
+            
+            getWeps(wepData)
+            
+           
+        })
+        _db
+        .collection("DDUsers").doc("players").collection("player").doc(charID)
+        .get()
+        .then(function(doc) {
+            let armorData = doc.data()
+            
+            getArmor(armorData)
+            
+           
+        })
+        _db
+        .collection("DDUsers").doc("players").collection("player").doc(charID)
+        .get()
+        .then(function(doc) {
+            let bioData = doc.data()
+            
+            getBio(bioData)
+            
+           
+        })
+        _db
+        .collection("DDUsers").doc("players").collection("player").doc(charID)
+        .get()
+        .then(function() {
+            
+            
+            getSettings(charID)
+            
+           
+        })
+
+        
+
     }
+
+    function getWeps(wepData) {
+
+        let wepLength = wepData.weapons.length
+        console.log(wepLength)
+
+        for(i = 1; i <= wepLength; i++) {
+            console.log(i)
+            let wepCount = 0
+            let wepId = wepData.weapons[wepCount].name
+            
+
+            console.log(wepData.weapons[wepCount].name)
+
+            $(".pp-weps").append(`<div id="${wepId}" class="wepName" style="background-color: rgb(235, 45, 45)">${wepCount}) ${wepData.weapons[wepCount].name}</div> <div id="${wepId}" class="wepAttack" style="background-color: rgba(156, 137, 110, .5)">${wepData.weapons[wepCount].attack}</div> <div id="${wepId}" class="wepDamage" style="background-color: rgba(156, 137, 110, .5)">${wepData.weapons[wepCount].damage}</div> <div id="${wepId}" class="wepType" style="background-color: rgba(156, 137, 110, .5)">${wepData.weapons[wepCount].type}</div>`)
+
+            // $("#selectWep").append(`<option value="${wepCount}">${wepData.weapons[wepCount].name}</option>`)
+
+        }
+
+        
+
+        
+        // wepActions(charID)
+        
+    }
+
+    function getArmor(armorData) {
+
+        let armLength = armorData.armorI.length
+        console.log(armLength)
+
+        for(i = 1; i <= armLength; i++) {
+            console.log(i)
+            let armCount = 0
+            let armId = armorData.armorI[armCount].name
+            
+
+            //console.log(wepData.weapons[armCount].name)
+
+            $(".pp-armor-list").append(`<div id="${armId}" class="armName" style="background-color: rgb(235, 45, 45)">${armCount}) ${armorData.armorI[armCount].name}</div>`)
+
+            // $("#selectWep").append(`<option value="${wepCount}">${wepData.weapons[wepCount].name}</option>`)
+            armCount++;
+
+        }
+
+        
+
+        
+        // wepActions(charID)
+        
+    }
+
+    function getBio(bioData) {
+        let bioInfo = bioData.biography
+        let traitInfo = bioData.traits
+
+        $(".pp-bio").html(bioInfo)
+        $(".pp-traits").html(traitInfo)
+    }
+    
+    function getSettings(charID) {
+
+        $("#deletePlayer").click(function() {
+            _db
+            .collection("DDUsers").doc("players").collection("player").doc(charID)
+            .delete()
+            $(".playerPage").css("display", "none")
+            $(".login-page").css("display", "flex")
+            $(".roomPage").css("display", "flex")
+            $(".roomButtons").css("display", "flex")
+            alert("Player Deleted")
+
+        })
+        $("#switchPlayers").click(function() {
+            $(".playerPage").css("display", "none")
+            $(".login-page").css("display", "flex")
+            $(".roomPage").css("display", "flex")
+            $(".roomButtons").css("display", "flex")
+        })
+        $("#viewCredits").click(function() {
+            $(".showCredits").css("display", "flex")
+            $(".pp-settings-buttons").css("display", "none")
+
+        })
+        $(".creditsBack").click(function() {
+            $(".showCredits").css("display", "none")
+            $(".pp-settings-buttons").css("display", "flex")
+
+        })
+
+    }
+
+
+
+    // function wepActions(charID) {
+    //     $("#selectWepBtn").click(function() {
+            
+    //         $(".pp-weps-list").css("display", "none")
+    //         $(".pp-weps-action").css("display", "flex")
+            
+
+    //         selectWeps(charID)
+    //     })
+    // }
+
+    // function selectWeps(charID) {
+    //     $("#selectWep").change(function() {
+    //         console.log(this.value)
+    //         var selectValue = this.value
+    //         console.log(selectValue)
+
+    //         selectWepAction(selectValue, charID)
+    //     })
+    // }
+
+    // function selectWepAction(value, charID) {
+
+    //     $("#dropWep").click(function() {
+
+    //         let zero = 0;
+
+    //          var dropRef = _db
+    //         .collection("DDUsers").doc("players").collection("player").doc(charID.weapons[0])
+            
+    //         dropRef
+    //         .delete()
+            
+
+            
+    //         // .then(function(doc) {
+
+
+    //         //     let userdrop = doc.data()
+    //         //     let weaponDrop = userdrop.weapons[0].w1[value]
+    //         //     console.log(weaponDrop)
+
+    //         //     dropWep(weaponDrop)
+    //         // })
+            
+
+          
+    //     })
+        
+    // }
+
+    
 
     function playerStats(levelUpID) {
         
-        //console.log(levelUpID)
+        console.log(levelUpID)
         var lvlUpPts = 0;
 
         //------------level up-------------
@@ -2191,7 +2440,8 @@ function initListeners() {
                 .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
 
                 let newLevel = 0
-                let newHp = 0
+                
+                
 
                 levelUpCol
                 .get()
@@ -2202,12 +2452,19 @@ function initListeners() {
 
                     
                         newLevel = levelUpData.level + 1;
-                        newHp = levelUpData.hp + 6;
+                      
+                        lvlUpPts = 3;
+
                         
                         
-                        levelUpPlayer(newLevel, newHp)
+                        levelUpPlayer(newLevel)
+                        allocatePoints(lvlUpPts)
                         
                 })
+
+
+
+
             })
             $("#levelUp-no").click(function() {
                 $(".levelUp-modal").css("display", "none");
@@ -2219,21 +2476,1799 @@ function initListeners() {
 
         })
 
-        function levelUpPlayer(newPlayerLevel, newPlayerHp) {
+        function levelUpPlayer(newPlayerLevel) {
 
             console.log(newPlayerLevel)
-            console.log(newPlayerHp)
+       
 
             _db
             .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
             .update({
                 
                 level: newPlayerLevel,
-                hp: newPlayerHp
+               
             })
 
             $(".pp-lvl").html(newPlayerLevel)
-            $(".pp-hp").html(newPlayerHp)
+            
+        }
+
+        function allocatePoints(points) {
+            $(".points-left-con").css("display", "flex")
+            $(".pp-stats-button-container").css("display", "flex")
+            // $(".levelUp-con").css("display", "flex")
+
+            $(".pp-inc-str").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+            $(".pp-inc-dex").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+            $(".pp-inc-con").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+            $(".pp-inc-int").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+            $(".pp-inc-wis").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+            $(".pp-inc-cha").css("box-shadow", "0px 6px 3px 4px rgb(235, 45, 45)")
+
+            $(".points").html(points)
+
+            _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+            .get()
+            .then(function(doc) {
+                let pointsData = doc.data()
+               
+                $(".pp-inc-str").click(function() {
+                
+                    let newStr = pointsData.strength + 1;
+                    $(".pp-str").html(newStr)
+                    console.log(newStr)
+
+                    points--;
+                   
+                    $(".points").html(points)
+
+                    increaseStrength(newStr)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-str").css("box-shadow", "0px 6px 3px 4px tan")
+                    
+
+                })
+                $(".pp-inc-dex").click(function() {
+                    
+                    let newDex = pointsData.dexterity + 1;
+                    $(".pp-dex").html(newDex)
+                    console.log(newDex)
+
+                    points--;
+                 
+                    $(".points").html(points)
+
+                    increaseDexterity(newDex)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-dex").css("box-shadow", "0px 6px 3px 4px tan")
+
+                })
+                $(".pp-inc-con").click(function() {
+                    let newCon = pointsData.constitution + 1;
+                    let newHp = pointsData.hp + 6;
+
+                    $(".pp-con").html(newCon)
+                    $(".pp-hp").html(newHp)
+                    console.log(newCon)
+
+                    
+                    points--;
+
+                    $(".points").html(points)
+
+                    increaseConstitution(newCon, newHp)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-con").css("box-shadow", "0px 6px 3px 4px tan")
+
+                })
+                $(".pp-inc-int").click(function() {
+                    let newInt = pointsData.intelligence + 1;
+                    $(".pp-int").html(newInt)
+                    console.log(newInt)
+
+                    points--;
+
+                    increaseIntelligence(newInt)
+                    
+                    $(".points").html(points)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-int").css("box-shadow", "0px 6px 3px 4px tan")
+
+                })
+                $(".pp-inc-wis").click(function() {
+                    let newWis = pointsData.wisdom + 1;
+                    $(".pp-wis").html(newWis)
+                    console.log(newWis)
+
+                    points--;
+
+                    increaseWisdom(newWis)
+
+                    $(".points").html(points)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-wis").css("box-shadow", "0px 6px 3px 4px tan")
+
+                })
+                $(".pp-inc-cha").click(function() {
+                    let newCha = pointsData.charisma + 1;
+                    $(".pp-cha").html(newCha)
+                    console.log(newCha)
+
+                    points--;
+
+                    increaseCharisma(newCha)
+
+                    $(".points").html(points)
+
+                    if(points == 0){
+                        $(".points-left-con").css("display", "none")
+                        $(".pp-stats-button-container").css("display", "none")
+                    }
+                    $(".pp-inc-cha").css("box-shadow", "0px 6px 3px 4px tan")
+
+                })
+                    
+                
+
+                
+
+                
+
+
+
+            })
+
+            
+        }
+
+        function increaseStrength(newStr) {
+
+            strDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                strDb
+                .update({
+                    
+                    strength: newStr,
+                
+                })
+
+            $(".pp-str").html(newStr)
+
+            if(newStr == 1) {
+                let newAth = -5
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 2 || newStr == 3) {
+                let newAth = -4
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 4 || newStr == 5) {
+                let newAth = -3
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 6 || newStr == 7) {
+                let newAth = -2
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 8 || newStr == 9) {
+                let newAth = -1
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 10 || newStr == 11) {
+                let newAth = 0
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 12 || newStr == 13) {
+                let newAth = 1
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 14 || newStr == 15) {
+                let newAth = 2
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 16 || newStr == 17) {
+                let newAth = 3
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 18 || newStr == 19) {
+                let newAth = 4
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 20 || newStr == 21) {
+                let newAth = 5
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 22 || newStr == 23) {
+                let newAth = 6
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 24 || newStr == 25) {
+                let newAth = 7
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 26 || newStr == 27) {
+                let newAth = 8
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 28 || newStr == 29) {
+                let newAth = 9
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+            if(newStr == 30) {
+                let newAth = 10
+
+                strDb
+                .update({
+                    
+                    athletics: newAth,
+                
+                })
+
+                $(".pp-ath").html(newAth)
+            }
+
+        }
+
+        function increaseDexterity(newDex) {
+            dexDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                dexDb
+                .update({
+                    
+                    dexterity: newDex,
+                
+                })
+
+            $(".pp-dex").html(newDex)
+
+            if(newDex == 1) {
+                let newAcr = -5
+                let newSle = -5
+                let newSte = -5
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 2 || newDex == 3) {
+                let newAcr = -4
+                let newSle = -4
+                let newSte = -4
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 4 || newDex == 5) {
+                let newAcr = -3
+                let newSle = -3
+                let newSte = -3
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 6 || newDex == 7) {
+                let newAcr = -2
+                let newSle = -2
+                let newSte = -2
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 8 || newDex == 9) {
+                let newAcr = -1
+                let newSle = -1
+                let newSte = -1
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 10 || newDex == 11) {
+                let newAcr = 0
+                let newSle = 0
+                let newSte = 0
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 12 || newDex == 13) {
+                let newAcr = 1
+                let newSle = 1
+                let newSte = 1
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 14 || newDex == 15) {
+                let newAcr = 2
+                let newSle = 2
+                let newSte = 2
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 16 || newDex == 17) {
+                let newAcr = 3
+                let newSle = 3
+                let newSte = 3
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 18 || newDex == 19) {
+                let newAcr = 4
+                let newSle = 4
+                let newSte = 4
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 20 || newDex == 21) {
+                let newAcr = 5
+                let newSle = 5
+                let newSte = 5
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 22 || newDex == 23) {
+                let newAcr = 6
+                let newSle = 6
+                let newSte = 6
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 24 || newDex == 25) {
+                let newAcr = 7
+                let newSle = 7
+                let newSte = 7
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 26 || newDex == 27) {
+                let newAcr = 8
+                let newSle = 8
+                let newSte = 8
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 28 || newDex == 29) {
+                let newAcr = 9
+                let newSle = 9
+                let newSte = 9
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+            if(newDex == 30) {
+                let newAcr = 10
+                let newSle = 10
+                let newSte = 10
+
+                dexDb
+                .update({
+                    
+                    acrobatics: newAcr,
+                    sleight: newSle,
+                    stealth: newSte
+                
+                })
+                $(".pp-acr").html(newAcr)
+                $(".pp-sle").html(newSle)
+                $(".pp-ste").html(newSte)
+            }
+        }
+
+        function increaseConstitution(newCon, newHp) {
+            conDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                conDb
+                .update({
+                    
+                    constitution: newCon,
+                    hp: newHp
+                
+                })
+
+            $(".pp-con").html(newCon)
+            $(".pp-hp").html(newHp)
+            
+        }
+
+        function increaseIntelligence(newInt) {
+            intDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                intDb
+                .update({
+                    
+                    intelligence: newInt,
+                
+                })
+
+            $(".pp-int").html(newInt)
+
+            if(newInt == 1) {
+                let newArc = -5
+                let newHis = -5
+                let newInv = -5
+                let newMed = -5
+                let newRel = -5
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 2 || newInt == 3) {
+                let newArc = -4
+                let newHis = -4
+                let newInv = -4
+                let newMed = -4
+                let newRel = -4
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 4 || newInt == 5) {
+                let newArc = -3
+                let newHis = -3
+                let newInv = -3
+                let newMed = -3
+                let newRel = -3
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 6 || newInt == 7) {
+                let newArc = -2
+                let newHis = -2
+                let newInv = -2
+                let newMed = -2
+                let newRel = -2
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 8 || newInt == 9) {
+                let newArc = -1
+                let newHis = -1
+                let newInv = -1
+                let newMed = -1
+                let newRel = -1
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 10 || newInt == 11) {
+                let newArc = 0
+                let newHis = 0
+                let newInv = 0
+                let newMed = 0
+                let newRel = 0
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 12 || newInt == 13) {
+                let newArc = 1
+                let newHis = 1
+                let newInv = 1
+                let newMed = 1
+                let newRel = 1
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 14 || newInt == 15) {
+                let newArc = 2
+                let newHis = 2
+                let newInv = 2
+                let newMed = 2
+                let newRel = 2
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 16 || newInt == 17) {
+                let newArc = 3
+                let newHis = 3
+                let newInv = 3
+                let newMed = 3
+                let newRel = 3
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 18 || newInt == 19) {
+                let newArc = 4
+                let newHis = 4
+                let newInv = 4
+                let newMed = 4
+                let newRel = 4
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 20 || newInt == 21) {
+                let newArc = 5
+                let newHis = 5
+                let newInv = 5
+                let newMed = 5
+                let newRel = 5
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 22 || newInt == 23) {
+                let newArc = 6
+                let newHis = 6
+                let newInv = 6
+                let newMed = 6
+                let newRel = 6
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 24 || newInt == 25) {
+                let newArc = 7
+                let newHis = 7
+                let newInv = 7
+                let newMed = 7
+                let newRel = 7
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 26 || newInt == 27) {
+                let newArc = 8
+                let newHis = 8
+                let newInv = 8
+                let newMed = 8
+                let newRel = 8
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 28 || newInt == 29) {
+                let newArc = 9
+                let newHis = 9
+                let newInv = 9
+                let newMed = 9
+                let newRel = 9
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+            if(newInt == 30) {
+                let newArc = 10
+                let newHis = 10
+                let newInv = 10
+                let newMed = 10
+                let newRel = 10
+
+                intDb
+                .update({
+                    
+                    arcana: newArc,
+                    history: newHis,
+                    investigation: newInv,
+                    medicine: newMed,
+                    religion: newRel
+                
+                })
+                $(".pp-arc").html(newArc)
+                $(".pp-his").html(newHis)
+                $(".pp-med").html(newMed)
+                $(".pp-rel").html(newRel)
+            }
+        }
+
+        function increaseWisdom(newWis) {
+            wisDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                wisDb
+                .update({
+                    
+                    wisdom: newWis,
+                
+                })
+
+            $(".pp-wis").html(newWis)
+
+            if(newWis == 1) {
+                let newAni = -5
+                let newIns = -5
+                let newNat = -5
+                let newPer = -5
+                let newSur = -5
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 2 || newWis == 3) {
+                let newAni = -4
+                let newIns = -4
+                let newNat = -4
+                let newPer = -4
+                let newSur = -4
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 4 || newWis == 5) {
+                let newAni = -3
+                let newIns = -3
+                let newNat = -3
+                let newPer = -3
+                let newSur = -3
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 6 || newWis == 7) {
+                let newAni = -2
+                let newIns = -2
+                let newNat = -2
+                let newPer = -2
+                let newSur = -2
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 8 || newWis == 9) {
+                let newAni = -1
+                let newIns = -1
+                let newNat = -1
+                let newPer = -1
+                let newSur = -1
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 10 || newWis == 11) {
+                let newAni = 0
+                let newIns = 0
+                let newNat = 0
+                let newPer = 0
+                let newSur = 0
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 12 || newWis == 13) {
+                let newAni = 1
+                let newIns = 1
+                let newNat = 1
+                let newPer = 1
+                let newSur = 1
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 14 || newWis == 15) {
+                let newAni = 2
+                let newIns = 2
+                let newNat = 2
+                let newPer = 2
+                let newSur = 2
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 16 || newWis == 17) {
+                let newAni = 3
+                let newIns = 3
+                let newNat = 3
+                let newPer = 3
+                let newSur = 3
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 18 || newWis == 19) {
+                let newAni = 4
+                let newIns = 4
+                let newNat = 4
+                let newPer = 4
+                let newSur = 4
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 20 || newWis == 21) {
+                let newAni = 5
+                let newIns = 5
+                let newNat = 5
+                let newPer = 5
+                let newSur = 5
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 22 || newWis == 23) {
+                let newAni = 6
+                let newIns = 6
+                let newNat = 6
+                let newPer = 6
+                let newSur = 6
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 24 || newWis == 25) {
+                let newAni = 7
+                let newIns = 7
+                let newNat = 7
+                let newPer = 7
+                let newSur = 7
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 26 || newWis == 27) {
+                let newAni = 8
+                let newIns = 8
+                let newNat = 8
+                let newPer = 8
+                let newSur = 8
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 28 || newWis == 29) {
+                let newAni = 9
+                let newIns = 9
+                let newNat = 9
+                let newPer = 9
+                let newSur = 9
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+            if(newWis == 30) {
+                let newAni = 10
+                let newIns = 10
+                let newNat = 10
+                let newPer = 10
+                let newSur = 10
+
+                wisDb
+                .update({
+                    
+                    animal: newAni,
+                    insight: newIns,
+                    nature: newNat,
+                    perception: newPer,
+                    survival: newSur
+                
+                })
+                $(".pp-ani").html(newAni)
+                $(".pp-ins").html(newIns)
+                $(".pp-nat").html(newNat)
+                $(".pp-per").html(newPer)
+                $(".pp-sur").html(newSur)
+            }
+        }
+
+        function increaseCharisma(newCha) {
+            chaDb = _db
+            .collection("DDUsers").doc("players").collection("player").doc(levelUpID)
+
+                chaDb
+                .update({
+                    
+                    charisma: newCha,
+                
+                })
+
+            $(".pp-cha").html(newCha)
+
+            if(newCha == 1) {
+                let newDec = -5
+                let newInti = -5
+                let newPerf = -5
+                let newPers = -5
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 2 || newCha == 3) {
+                let newDec = -4
+                let newInti = -4
+                let newPerf = -4
+                let newPers = -4
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 4 || newCha == 5) {
+                let newDec = -3
+                let newInti = -3
+                let newPerf = -3
+                let newPers = -3
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 6 || newCha == 7) {
+                let newDec = -2
+                let newInti = -2
+                let newPerf = -2
+                let newPers = -2
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 8 || newCha == 9) {
+                let newDec = -1
+                let newInti = -1
+                let newPerf = -1
+                let newPers = -1
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 10 || newCha == 11) {
+                let newDec = 0
+                let newInti = 0
+                let newPerf = 0
+                let newPers = 0
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 12 || newCha == 13) {
+                let newDec = 1
+                let newInti = 1
+                let newPerf = 1
+                let newPers = 1
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 14 || newCha == 15) {
+                let newDec = 2
+                let newInti = 2
+                let newPerf = 2
+                let newPers = 2
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 16 || newCha == 17) {
+                let newDec = 3
+                let newInti = 3
+                let newPerf = 3
+                let newPers = 3
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 18 || newCha == 19) {
+                let newDec = 4
+                let newInti = 4
+                let newPerf = 4
+                let newPers = 4
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 20 || newCha == 21) {
+                let newDec = 5
+                let newInti = 5
+                let newPerf = 5
+                let newPers = 5
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 22 || newCha == 23) {
+                let newDec = 6
+                let newInti = 6
+                let newPerf = 6
+                let newPers = 6
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 24 || newCha == 25) {
+                let newDec = 7
+                let newInti = 7
+                let newPerf = 7
+                let newPers = 7
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 26 || newCha == 27) {
+                let newDec = 8
+                let newInti = 8
+                let newPerf = 8
+                let newPers = 8
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 28 || newCha == 29) {
+                let newDec = 9
+                let newInti = 9
+                let newPerf = 9
+                let newPers = 9
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
+            if(newCha == 30) {
+                let newDec = 10
+                let newInti = 10
+                let newPerf = 10
+                let newPers = 10
+                
+
+                chaDb
+                .update({
+                    
+                    deception: newDec,
+                    intimidation: newInti,
+                    performance: newPerf,
+                    persuasion: newPers
+                
+                })
+                $(".pp-dec").html(newDec)
+                $(".pp-inti").html(newInti)
+                $(".pp-perf").html(newPerf)
+                $(".pp-pers").html(newPers)
+                
+            }
         }
 
         //------------adjust hp--------------
@@ -2267,6 +4302,11 @@ function initListeners() {
                 })
 
                 
+
+            })
+            $("#cancelNewHp").click(function() {
+                $(".adjustHp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
 
             })
         })
@@ -2313,6 +4353,11 @@ function initListeners() {
                 })
 
                 
+
+            })
+            $("#cancelNewGp").click(function() {
+                $(".adjustGp-modal").css("display", "none");
+                $(".player-level-container").css("display", "flex");
 
             })
         })

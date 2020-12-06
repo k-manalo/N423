@@ -1,5 +1,5 @@
 .playerPage {
-    background-color: black;
+    background-color: linear-gradient( rgb(0, 0, 0),rgb(210, 180, 140));
     height: 2100px;
     width: 66%;
     margin: 0 auto;
@@ -446,7 +446,7 @@
     .playerSheet {
         
         background-color: tan;
-        height: 100%;
+        height: 1800px;
         
         .pp-stats-container {
             padding-top: 50px;
@@ -460,6 +460,28 @@
                 display: flex;
                 flex-direction: column;
                 width: 45%;
+
+                .points-left-con {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    .pt-con {
+                        
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .points {
+                            
+                            margin-left: 25px;
+                            font-size: 40px;
+                        }
+                    }
+                    
+                }
+
+
                 .pp-stats {
                
                 
@@ -817,6 +839,19 @@
                             // background-color: rgba(156, 137, 110, .5);
                             font-family: 'Acme', sans-serif;
                             font-size: 27px;
+                            .wepName {
+                                margin-top: 20px;
+                                 background-color: rgba(156, 137, 110, .5);
+                            }
+                            .wepAttack {
+                                background-color: rgba(156, 137, 110, .5);
+                            }
+                            .wepDamage {
+                                background-color: rgba(156, 137, 110, .5);
+                            }
+                            .wepType {
+                                background-color: rgba(156, 137, 110, .5);
+                            }
                         }
                         
                     }
@@ -935,8 +970,9 @@
                     .pp-armor-list {
                         padding-top: 20px;
                         display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        margin: 0 auto;
+                        width: 100%;
                         .pp-armor-names {
                             // margin-left: 100px;
                             padding-left: 20%;
@@ -1280,6 +1316,29 @@
                                 background-color: rgb(156, 137, 110);
                 }
             }
+            .showCredits {
+                padding-left: 25px;
+                padding-right: 25px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .creditsBack {
+                    cursor: pointer;
+                                outline: none;
+                                margin: 0 auto;
+                                height: 50px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                border: none;
+                                background-color: tan;
+                                width: 200px;
+                                border-radius: 200px;
+                                font-size: 27px;
+                                font-family: 'Acme', sans-serif;
+                                box-shadow: 0px 6px 3px 4px rgb(235, 45, 45);
+                }
+            }
         }
         
 
@@ -1320,4 +1379,10 @@
         }
     }
     
+}
+
+@media (min-width: 841px) {
+    .playerSheet {
+        height: 1800px;
+    }
 }
